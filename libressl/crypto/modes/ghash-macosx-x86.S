@@ -1,0 +1,233 @@
+.file	"ghash-x86.s"
+.text
+.globl	_gcm_gmult_4bit
+.align	4
+_gcm_gmult_4bit:
+L_gcm_gmult_4bit_begin:
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%esi
+	pushl	%edi
+	subl	$84,%esp
+	movl	104(%esp),%edi
+	movl	108(%esp),%esi
+	movl	(%edi),%ebp
+	movl	4(%edi),%edx
+	movl	8(%edi),%ecx
+	movl	12(%edi),%ebx
+	movl	$0,16(%esp)
+	movl	$471859200,20(%esp)
+	movl	$943718400,24(%esp)
+	movl	$610271232,28(%esp)
+	movl	$1887436800,32(%esp)
+	movl	$1822425088,36(%esp)
+	movl	$1220542464,40(%esp)
+	movl	$1423966208,44(%esp)
+	movl	$3774873600,48(%esp)
+	movl	$4246732800,52(%esp)
+	movl	$3644850176,56(%esp)
+	movl	$3311403008,60(%esp)
+	movl	$2441084928,64(%esp)
+	movl	$2376073216,68(%esp)
+	movl	$2847932416,72(%esp)
+	movl	$3051356160,76(%esp)
+	movl	%ebp,(%esp)
+	movl	%edx,4(%esp)
+	movl	%ecx,8(%esp)
+	movl	%ebx,12(%esp)
+	shrl	$20,%ebx
+	andl	$240,%ebx
+	movl	4(%esi,%ebx,1),%ebp
+	movl	(%esi,%ebx,1),%edx
+	movl	12(%esi,%ebx,1),%ecx
+	movl	8(%esi,%ebx,1),%ebx
+	xorl	%eax,%eax
+	movl	$15,%edi
+	jmp	L000x86_loop
+.align	4,0x90
+L000x86_loop:
+	movb	%bl,%al
+	shrdl	$4,%ecx,%ebx
+	andb	$15,%al
+	shrdl	$4,%edx,%ecx
+	shrdl	$4,%ebp,%edx
+	shrl	$4,%ebp
+	xorl	16(%esp,%eax,4),%ebp
+	movb	(%esp,%edi,1),%al
+	andb	$240,%al
+	xorl	8(%esi,%eax,1),%ebx
+	xorl	12(%esi,%eax,1),%ecx
+	xorl	(%esi,%eax,1),%edx
+	xorl	4(%esi,%eax,1),%ebp
+	decl	%edi
+	js	L001x86_break
+	movb	%bl,%al
+	shrdl	$4,%ecx,%ebx
+	andb	$15,%al
+	shrdl	$4,%edx,%ecx
+	shrdl	$4,%ebp,%edx
+	shrl	$4,%ebp
+	xorl	16(%esp,%eax,4),%ebp
+	movb	(%esp,%edi,1),%al
+	shlb	$4,%al
+	xorl	8(%esi,%eax,1),%ebx
+	xorl	12(%esi,%eax,1),%ecx
+	xorl	(%esi,%eax,1),%edx
+	xorl	4(%esi,%eax,1),%ebp
+	jmp	L000x86_loop
+.align	4,0x90
+L001x86_break:
+	# bswap ebx 
+	xchgb	%bl,%bh
+	rorl	$16,%ebx
+	xchgb	%bl,%bh
+	# bswap ecx 
+	xchgb	%cl,%ch
+	rorl	$16,%ecx
+	xchgb	%cl,%ch
+	# bswap edx 
+	xchgb	%dl,%dh
+	rorl	$16,%edx
+	xchgb	%dl,%dh
+	movl	%ebp,%eax
+	# bswap eax 
+	xchgb	%al,%ah
+	rorl	$16,%eax
+	xchgb	%al,%ah
+	movl	%eax,%ebp
+	movl	104(%esp),%edi
+	movl	%ebx,12(%edi)
+	movl	%ecx,8(%edi)
+	movl	%edx,4(%edi)
+	movl	%ebp,(%edi)
+	addl	$84,%esp
+	popl	%edi
+	popl	%esi
+	popl	%ebx
+	popl	%ebp
+	ret
+.globl	_gcm_ghash_4bit
+.align	4
+_gcm_ghash_4bit:
+L_gcm_ghash_4bit_begin:
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%esi
+	pushl	%edi
+	subl	$84,%esp
+	movl	104(%esp),%ebx
+	movl	108(%esp),%esi
+	movl	112(%esp),%edi
+	movl	116(%esp),%ecx
+	addl	%edi,%ecx
+	movl	%ecx,116(%esp)
+	movl	(%ebx),%ebp
+	movl	4(%ebx),%edx
+	movl	8(%ebx),%ecx
+	movl	12(%ebx),%ebx
+	movl	$0,16(%esp)
+	movl	$471859200,20(%esp)
+	movl	$943718400,24(%esp)
+	movl	$610271232,28(%esp)
+	movl	$1887436800,32(%esp)
+	movl	$1822425088,36(%esp)
+	movl	$1220542464,40(%esp)
+	movl	$1423966208,44(%esp)
+	movl	$3774873600,48(%esp)
+	movl	$4246732800,52(%esp)
+	movl	$3644850176,56(%esp)
+	movl	$3311403008,60(%esp)
+	movl	$2441084928,64(%esp)
+	movl	$2376073216,68(%esp)
+	movl	$2847932416,72(%esp)
+	movl	$3051356160,76(%esp)
+.align	4,0x90
+L002x86_outer_loop:
+	xorl	12(%edi),%ebx
+	xorl	8(%edi),%ecx
+	xorl	4(%edi),%edx
+	xorl	(%edi),%ebp
+	movl	%ebx,12(%esp)
+	movl	%ecx,8(%esp)
+	movl	%edx,4(%esp)
+	movl	%ebp,(%esp)
+	shrl	$20,%ebx
+	andl	$240,%ebx
+	movl	4(%esi,%ebx,1),%ebp
+	movl	(%esi,%ebx,1),%edx
+	movl	12(%esi,%ebx,1),%ecx
+	movl	8(%esi,%ebx,1),%ebx
+	xorl	%eax,%eax
+	movl	$15,%edi
+	jmp	L003x86_loop
+.align	4,0x90
+L003x86_loop:
+	movb	%bl,%al
+	shrdl	$4,%ecx,%ebx
+	andb	$15,%al
+	shrdl	$4,%edx,%ecx
+	shrdl	$4,%ebp,%edx
+	shrl	$4,%ebp
+	xorl	16(%esp,%eax,4),%ebp
+	movb	(%esp,%edi,1),%al
+	andb	$240,%al
+	xorl	8(%esi,%eax,1),%ebx
+	xorl	12(%esi,%eax,1),%ecx
+	xorl	(%esi,%eax,1),%edx
+	xorl	4(%esi,%eax,1),%ebp
+	decl	%edi
+	js	L004x86_break
+	movb	%bl,%al
+	shrdl	$4,%ecx,%ebx
+	andb	$15,%al
+	shrdl	$4,%edx,%ecx
+	shrdl	$4,%ebp,%edx
+	shrl	$4,%ebp
+	xorl	16(%esp,%eax,4),%ebp
+	movb	(%esp,%edi,1),%al
+	shlb	$4,%al
+	xorl	8(%esi,%eax,1),%ebx
+	xorl	12(%esi,%eax,1),%ecx
+	xorl	(%esi,%eax,1),%edx
+	xorl	4(%esi,%eax,1),%ebp
+	jmp	L003x86_loop
+.align	4,0x90
+L004x86_break:
+	# bswap ebx 
+	xchgb	%bl,%bh
+	rorl	$16,%ebx
+	xchgb	%bl,%bh
+	# bswap ecx 
+	xchgb	%cl,%ch
+	rorl	$16,%ecx
+	xchgb	%cl,%ch
+	# bswap edx 
+	xchgb	%dl,%dh
+	rorl	$16,%edx
+	xchgb	%dl,%dh
+	movl	%ebp,%eax
+	# bswap eax 
+	xchgb	%al,%ah
+	rorl	$16,%eax
+	xchgb	%al,%ah
+	movl	%eax,%ebp
+	movl	112(%esp),%edi
+	leal	16(%edi),%edi
+	cmpl	116(%esp),%edi
+	movl	%edi,112(%esp)
+	jb	L002x86_outer_loop
+	movl	104(%esp),%edi
+	movl	%ebx,12(%edi)
+	movl	%ecx,8(%edi)
+	movl	%edx,4(%edi)
+	movl	%ebp,(%edi)
+	addl	$84,%esp
+	popl	%edi
+	popl	%esi
+	popl	%ebx
+	popl	%ebp
+	ret
+.byte	71,72,65,83,72,32,102,111,114,32,120,56,54,44,32,67
+.byte	82,89,80,84,79,71,65,77,83,32,98,121,32,60,97,112
+.byte	112,114,111,64,111,112,101,110,115,115,108,46,111,114,103,62
+.byte	0
