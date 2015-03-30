@@ -7,7 +7,7 @@ adds additional shims for using LibreSSL within [Bazel][1] projects.
 
 To use this package:
 
-  1.  Install Bazel on your system.
+      # 1.  Install Bazel on your system.
 
       $ cd ~/src
       $ git clone https://github.com/google/bazel.git
@@ -17,7 +17,7 @@ To use this package:
       # Assuming ~/bin exists and is in $PATH...
       $ cp -pf bazel-bin/src/bazel ~/bin/bazel
 
-  2.  Create or download a project that uses Bazel and needs LibreSSL.
+      # 2.  Create or download a project that uses Bazel and needs LibreSSL.
 
       $ cd ~/src
       $ git clone https://example.org/my-project
@@ -27,7 +27,7 @@ To use this package:
       $ bazel build //foo  # fails
       $ less foo/BUILD  # depends on //openssl or //libressl
 
-  3.  Fetch LibreSSL to your system and symlink it in.
+      # 3.  Fetch LibreSSL to your system and symlink it in.
 
       $ cd ~/src/my-project
       $ git clone https://github.com/chronos-tachyon/libressl-bazel ../libressl-bazel
