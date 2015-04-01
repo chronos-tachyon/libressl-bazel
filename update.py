@@ -8,6 +8,7 @@
 
 from __future__ import print_function
 import argparse
+import datetime
 import errno
 import os
 import re
@@ -458,6 +459,9 @@ def Pull(args, branch_name):
       Run(['git', 'clone', args.upstream_url, args.upstream_dir])
     Run(['git', 'checkout', branch_name], cwd=args.upstream_dir)
     Run(['git', 'pull', '--rebase'], cwd=args.upstream_dir)
+  return subprocess.check_output(
+      ['git', 'log', '--max-count=1', '--date=short', '--format=%cd'],
+      cwd=args.upstream_dir).rstrip('\r\n')
 
 
 def Clean(args):
@@ -518,9 +522,11 @@ def GenerateAsm(scriptroot, dstroot, scriptdir, scriptname, cpu, abi):
     GenerateAsm(scriptroot, dstroot, scriptdir, scriptname, '586', abi)
 
 
-def ConvertPod(podpath, manpath, release='LibreSSL'):
+def ConvertPod(podpath, manpath, release='LibreSSL', date=None):
   name, section = os.path.splitext(os.path.basename(manpath))
   section = section[1:]
+  if not date:
+    date = datetime.datetime.utcnow().date().isoformat()
   with tempfile.NamedTemporaryFile() as tmp:
     with Open(podpath, 'r') as pod:
       Run([
@@ -530,6 +536,7 @@ def ConvertPod(podpath, manpath, release='LibreSSL'):
         '--center=LibreSSL',
         '--section=' + section,
         '--name=' + name,
+        '--date=' + date,
       ], stdin=pod, stdout=tmp)
     Copy(tmp.name, manpath, preserve=True)
 
@@ -549,7 +556,7 @@ def main(argv):
   print('Version information: branch {!r}, version {!r}'
         .format(openbsd_branch, libressl_version))
 
-  Pull(args, openbsd_branch)
+  pull_date = Pull(args, openbsd_branch)
   Clean(args)
 
   def Headers(container, subdir=None):
@@ -750,12 +757,12 @@ def main(argv):
   for podpath in openbsd_appdoc.Find(IsPattern(r'\.pod$')):
     base = os.path.basename(podpath)[:-4]
     manpath = DST('man/man1/' + base + '.1ssl')
-    ConvertPod(podpath, manpath, release='LibreSSL ' + libressl_version)
+    ConvertPod(podpath, manpath, release='LibreSSL ' + libressl_version, date=pull_date)
   openbsd_cryptodoc = openbsd.SubTree('src/lib/libssl/src/doc/crypto')
   for podpath in openbsd_cryptodoc.Find(IsPattern(r'\.pod$')):
     base = os.path.basename(podpath)[:-4]
     manpath = DST('man/man3/' + base + '.3ssl')
-    ConvertPod(podpath, manpath, release='LibreSSL ' + libressl_version)
+    ConvertPod(podpath, manpath, release='LibreSSL ' + libressl_version, date=pull_date)
 
   print('Generating symlinks to aliased manual pages...')
   man_links = []
