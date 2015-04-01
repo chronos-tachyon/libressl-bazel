@@ -17,6 +17,7 @@ To use this package:
         $ cp -pf bazel-bin/src/bazel ~/bin/bazel
 
 2.  Create or download a project that uses Bazel and needs LibreSSL.
+
         $ cd ..
         $ git clone https://example.org/my-project
         $ cd my-project
