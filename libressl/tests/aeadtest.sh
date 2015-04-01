@@ -1,9 +1,8 @@
 #!/bin/sh
 set -eu
-DIR="${TEST_SRCDIR}/libressl/tests"
-TEST="${DIR}/aeadtest"
-DATA="${DIR}/aeadtests.txt"
-if [ -e "${TEST}.exe" ]; then
-	TEST="${TEST}.exe"
+bin="${TEST_SRCDIR}/libressl/tests/aeadtest"
+data="${TEST_SRCDIR}/libressl/tests/aeadtests.txt"
+if [ -e "${bin}.exe" ]; then
+	bin="${bin}.exe"
 fi
-"$TEST" "$DATA"
+"$bin" "$data"

@@ -1,7 +1,8 @@
 #!/bin/sh
-set -e
-TEST=./pq_test
-if [ -e ./pq_test.exe ]; then
-	TEST=./pq_test.exe
+set -eu
+bin="${TEST_SRCDIR}/libressl/tests/pq_test"
+data="${TEST_SRCDIR}/libressl/tests/pq_expected.txt"
+if [ -e "${bin}.exe" ]; then
+	bin="${bin}.exe"
 fi
-$TEST | diff -b $srcdir/pq_expected.txt -
+"$bin" | diff -b "$data" -

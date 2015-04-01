@@ -1,7 +1,8 @@
 #!/bin/sh
-set -e
-TEST=./evptest
-if [ -e ./evptest.exe ]; then
-	TEST=./evptest.exe
+set -eu
+bin="${TEST_SRCDIR}/libressl/tests/evptest"
+data="${TEST_SRCDIR}/libressl/tests/evptests.txt"
+if [ -e "${bin}.exe" ]; then
+	bin="${bin}.exe"
 fi
-$TEST $srcdir/evptests.txt
+"$bin" "$data"

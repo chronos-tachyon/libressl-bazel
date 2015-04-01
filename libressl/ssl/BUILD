@@ -24,3 +24,9 @@ cc_library(
     includes = ["libressl/include"],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "internal_bytestring",
+    hdrs = ["bytestring.h"],
+    visibility = ["//libressl/tests:__pkg__"],
+)

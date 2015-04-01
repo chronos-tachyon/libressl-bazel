@@ -114,3 +114,9 @@ cc_library(
     includes = ["libressl/include"],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "internal_asn1",
+    hdrs = ["asn1/asn1_locl.h"],
+    visibility = ["//libressl/tests:__pkg__"],
+)

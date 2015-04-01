@@ -695,7 +695,7 @@ def main(argv):
   print('Copying test sources...')
 
   Copy(BSD('src/regress/lib/libc/arc4random-fork/arc4random-fork.c'),
-       DST('libressl/tests/arc4randomforktest.c'))
+       DST('libressl/tests/arc4random-fork.c'))
   Copy(BSD('src/regress/lib/libc/explicit_bzero/explicit_bzero.c'),
        DST('libressl/tests/explicit_bzero.c'))
   Copy(BSD('src/regress/lib/libc/timingsafe/timingsafe.c'),
