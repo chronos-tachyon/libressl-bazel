@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/pkcs12.h"
+#include <openssl/err.h>
+#include <openssl/pkcs12.h>
 
 /* Encrypt/Decrypt a buffer based on password and algor, result in a
  * malloc'ed buffer

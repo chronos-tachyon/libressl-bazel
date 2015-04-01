@@ -139,9 +139,9 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/evp.h"
-#include "openssl/hmac.h"
-#include "openssl/md5.h"
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
+#include <openssl/md5.h>
 
 /* seed1 through seed5 are virtually concatenated */
 static int

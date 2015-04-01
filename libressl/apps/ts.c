@@ -62,11 +62,11 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/ts.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/ts.h>
 
 /* Length of the nonce of the request in bits (must be a multiple of 8). */
 #define	NONCE_LENGTH		64

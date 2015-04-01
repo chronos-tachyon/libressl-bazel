@@ -58,17 +58,17 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_RIPEMD
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/ripemd.h"
-#include "openssl/x509.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/ripemd.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_RSA
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 #endif
 
 static int

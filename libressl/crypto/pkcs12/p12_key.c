@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/pkcs12.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/pkcs12.h>
 
 /* PKCS12 compatible key/IV generation */
 #ifndef min

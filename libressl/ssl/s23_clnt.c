@@ -113,9 +113,9 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
 
 static const SSL_METHOD *ssl23_get_client_method(int ver);
 static int ssl23_client_hello(SSL *s);

@@ -59,7 +59,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "bn_lcl.h"
 

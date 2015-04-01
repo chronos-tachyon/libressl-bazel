@@ -57,8 +57,8 @@
  */
 
 #include "des_locl.h"
-#include "openssl/opensslv.h"
-#include "openssl/bio.h"
+#include <openssl/opensslv.h>
+#include <openssl/bio.h>
 
 const char *DES_options(void)
 	{

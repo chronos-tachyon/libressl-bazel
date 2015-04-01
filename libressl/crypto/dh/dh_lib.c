@@ -58,14 +58,14 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bn.h"
-#include "openssl/dh.h"
-#include "openssl/err.h"
+#include <openssl/bn.h>
+#include <openssl/dh.h>
+#include <openssl/err.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 static const DH_METHOD *default_DH_method = NULL;

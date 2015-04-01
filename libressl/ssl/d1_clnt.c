@@ -117,12 +117,12 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/bn.h"
-#include "openssl/buffer.h"
-#include "openssl/dh.h"
-#include "openssl/evp.h"
-#include "openssl/md5.h"
-#include "openssl/objects.h"
+#include <openssl/bn.h>
+#include <openssl/buffer.h>
+#include <openssl/dh.h>
+#include <openssl/evp.h>
+#include <openssl/md5.h>
+#include <openssl/objects.h>
 
 static const SSL_METHOD *dtls1_get_client_method(int ver);
 static int dtls1_get_hello_verify(SSL *s);

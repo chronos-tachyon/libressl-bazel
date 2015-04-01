@@ -65,7 +65,7 @@
 #define HEADER_ENGINE_INT_H
 
 /* Take public definitions from engine.h */
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 
 #ifdef  __cplusplus
 extern "C" {

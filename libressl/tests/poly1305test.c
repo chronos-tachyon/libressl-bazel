@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-#include "openssl/poly1305.h"
+#include <openssl/poly1305.h>
 
 void poly1305_auth(unsigned char mac[16], const unsigned char *m, size_t bytes,
     const unsigned char key[32]);

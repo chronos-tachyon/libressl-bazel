@@ -59,11 +59,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/ui.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/ui.h>
+#include <openssl/x509.h>
 
 /* should be init to zeros. */
 static char prompt_string[80];

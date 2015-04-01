@@ -56,7 +56,7 @@
  *
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "cryptlib.h"
 #include "eng_int.h"

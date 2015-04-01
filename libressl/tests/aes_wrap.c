@@ -55,7 +55,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/aes.h"
+#include <openssl/aes.h>
 
 int AES_wrap_unwrap_test(const unsigned char *, int, const unsigned char *,
 	const unsigned char *, const unsigned char *, int);

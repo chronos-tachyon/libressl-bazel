@@ -161,19 +161,19 @@
 
 #include "apps.h"
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/ocsp.h"
-#include "openssl/pem.h"
-#include "openssl/ssl.h"
-#include "openssl/x509.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/ocsp.h>
+#include <openssl/pem.h>
+#include <openssl/ssl.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_DH
-#include "openssl/dh.h"
+#include <openssl/dh.h>
 #endif
 
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 
 #include "s_apps.h"
 #include "timeouts.h"

@@ -19,7 +19,7 @@
 #include <errno.h>
 #include <stdlib.h>
 
-#include "libressl/tls.h"
+#include <tls.h>
 #include "tls_internal.h"
 
 static int

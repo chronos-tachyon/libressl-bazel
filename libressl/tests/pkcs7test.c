@@ -20,12 +20,12 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
-#include "openssl/pkcs7.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
+#include <openssl/pkcs7.h>
+#include <openssl/x509.h>
 
 const char certificate[] = "\
 -----BEGIN CERTIFICATE----- \n\

@@ -53,8 +53,8 @@
 
 #include <string.h>
 
-#include "openssl/aes.h"
-#include "openssl/bio.h"
+#include <openssl/aes.h>
+#include <openssl/bio.h>
 
 static const unsigned char default_iv[] = {
 	0xA6, 0xA6, 0xA6, 0xA6, 0xA6, 0xA6, 0xA6, 0xA6,

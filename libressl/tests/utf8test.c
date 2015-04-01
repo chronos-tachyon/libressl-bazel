@@ -22,7 +22,7 @@
 #include <string.h>
 #include <err.h>
 
-#include "openssl/asn1.h"
+#include <openssl/asn1.h>
 #include "asn1_locl.h"		/* peek into the internals */
 
 #define	UNCHANGED	0xfedcba98

@@ -111,7 +111,7 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 #include "bn_lcl.h"
 

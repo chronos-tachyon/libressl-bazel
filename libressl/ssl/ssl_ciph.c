@@ -142,10 +142,10 @@
 
 #include <stdio.h>
 
-#include "openssl/objects.h"
+#include <openssl/objects.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 #include "ssl_locl.h"

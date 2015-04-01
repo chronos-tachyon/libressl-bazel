@@ -64,12 +64,12 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bn.h"
-#include "openssl/ec.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
+#include <openssl/bn.h>
+#include <openssl/ec.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
 
 int 
 ECPKParameters_print_fp(FILE * fp, const EC_GROUP * x, int off)

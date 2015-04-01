@@ -79,9 +79,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
-#include "openssl/crypto.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/crypto.h>
 
 static int bio_new(BIO *bio);
 static int bio_free(BIO *bio);

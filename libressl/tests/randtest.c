@@ -60,7 +60,7 @@
 #include <stdlib.h>
 
 #undef LIBRESSL_INTERNAL	/* Needed to get RAND_pseudo_bytes(). */
-#include "openssl/rand.h"
+#include <openssl/rand.h>
 
 /* some FIPS 140-1 random number test */
 /* some simple tests */

@@ -60,9 +60,9 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
 
 static const SSL_METHOD *tls1_get_client_method(int ver);
 

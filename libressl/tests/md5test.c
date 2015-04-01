@@ -60,8 +60,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/evp.h"
-#include "openssl/md5.h"
+#include <openssl/evp.h>
+#include <openssl/md5.h>
 
 static char *test[]={
 	"",

@@ -56,7 +56,7 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/opensslconf.h" /* To see if OPENSSL_NO_SHA is defined */
+#include <openssl/opensslconf.h> /* To see if OPENSSL_NO_SHA is defined */
 
 #ifndef OPENSSL_NO_SHA
 
@@ -64,9 +64,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/bn.h"
-#include "openssl/evp.h"
-#include "openssl/sha.h"
+#include <openssl/bn.h>
+#include <openssl/evp.h>
+#include <openssl/sha.h>
 
 #include "dsa_locl.h"
 

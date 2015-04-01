@@ -54,7 +54,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/aes.h"
+#include <openssl/aes.h>
 
 #define TEST_SIZE	128
 #define BIG_TEST_SIZE 10240

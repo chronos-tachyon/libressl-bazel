@@ -114,8 +114,8 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
 
 static int do_ssl3_write(SSL *s, int type, const unsigned char *buf,
     unsigned int len, int create_empty_fragment);

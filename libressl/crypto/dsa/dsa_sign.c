@@ -58,8 +58,8 @@
 
 /* Original version from Steven Schoch <schoch@sheba.arc.nasa.gov> */
 
-#include "openssl/bn.h"
-#include "openssl/dsa.h"
+#include <openssl/bn.h>
+#include <openssl/dsa.h>
 
 DSA_SIG *
 DSA_do_sign(const unsigned char *dgst, int dlen, DSA *dsa)

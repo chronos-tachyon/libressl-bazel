@@ -60,9 +60,9 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/err.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 static int pkcs7_copy_existing_digest(PKCS7 *p7, PKCS7_SIGNER_INFO *si);
 

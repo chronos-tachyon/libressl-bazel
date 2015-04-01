@@ -56,16 +56,16 @@
  *
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 
 #include <string.h>
 
 #include "apps.h"
 
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/rsa.h"
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/rsa.h>
 
 #define RSA_SIGN 	1
 #define RSA_VERIFY 	2

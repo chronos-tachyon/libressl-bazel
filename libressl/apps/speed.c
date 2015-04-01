@@ -92,65 +92,65 @@
 
 #include "apps.h"
 
-#include "openssl/bn.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/modes.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/bn.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/modes.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_AES
-#include "openssl/aes.h"
+#include <openssl/aes.h>
 #endif
 #ifndef OPENSSL_NO_BF
-#include "openssl/blowfish.h"
+#include <openssl/blowfish.h>
 #endif
 #ifndef OPENSSL_NO_CAST
-#include "openssl/cast.h"
+#include <openssl/cast.h>
 #endif
 #ifndef OPENSSL_NO_CAMELLIA
-#include "openssl/camellia.h"
+#include <openssl/camellia.h>
 #endif
 #ifndef OPENSSL_NO_DES
-#include "openssl/des.h"
+#include <openssl/des.h>
 #endif
-#include "openssl/dsa.h"
-#include "openssl/ecdh.h"
-#include "openssl/ecdsa.h"
+#include <openssl/dsa.h>
+#include <openssl/ecdh.h>
+#include <openssl/ecdsa.h>
 #ifndef OPENSSL_NO_HMAC
-#include "openssl/hmac.h"
+#include <openssl/hmac.h>
 #endif
 #ifndef OPENSSL_NO_IDEA
-#include "openssl/idea.h"
+#include <openssl/idea.h>
 #endif
 #ifndef OPENSSL_NO_MDC2
-#include "openssl/mdc2.h"
+#include <openssl/mdc2.h>
 #endif
 #ifndef OPENSSL_NO_MD4
-#include "openssl/md4.h"
+#include <openssl/md4.h>
 #endif
 #ifndef OPENSSL_NO_MD5
-#include "openssl/md5.h"
+#include <openssl/md5.h>
 #endif
 #ifndef OPENSSL_NO_RC2
-#include "openssl/rc2.h"
+#include <openssl/rc2.h>
 #endif
 #ifndef OPENSSL_NO_RC4
-#include "openssl/rc4.h"
+#include <openssl/rc4.h>
 #endif
 #ifndef OPENSSL_NO_RC5
 #include <openssl/rc5.h>
 #endif
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 #ifndef OPENSSL_NO_RIPEMD
-#include "openssl/ripemd.h"
+#include <openssl/ripemd.h>
 #endif
 #ifndef OPENSSL_NO_SHA
-#include "openssl/sha.h"
+#include <openssl/sha.h>
 #endif
 #ifndef OPENSSL_NO_WHIRLPOOL
-#include "openssl/whrlpool.h"
+#include <openssl/whrlpool.h>
 #endif
 
 #include "./testdsa.h"

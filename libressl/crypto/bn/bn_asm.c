@@ -64,7 +64,7 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "bn_lcl.h"
 

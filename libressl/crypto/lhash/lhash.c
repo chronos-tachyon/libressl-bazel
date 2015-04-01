@@ -98,10 +98,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/crypto.h"
-#include "openssl/lhash.h"
+#include <openssl/crypto.h>
+#include <openssl/lhash.h>
 
 #undef MIN_NODES
 #define MIN_NODES	16

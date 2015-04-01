@@ -111,11 +111,11 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/rsa.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/rsa.h>
 
 static int RSA_eay_public_encrypt(int flen, const unsigned char *from,
     unsigned char *to, RSA *rsa, int padding);

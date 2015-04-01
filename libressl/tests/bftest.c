@@ -63,7 +63,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/blowfish.h"
+#include <openssl/blowfish.h>
 
 static char *bf_key[2]={
 	"abcdefghijklmnopqrstuvwxyz",

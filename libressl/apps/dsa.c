@@ -56,7 +56,7 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/opensslconf.h"	/* for OPENSSL_NO_DSA */
+#include <openssl/opensslconf.h>	/* for OPENSSL_NO_DSA */
 
 
 #include <stdio.h>
@@ -66,13 +66,13 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/dsa.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/dsa.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 /* -inform arg	- input format - default PEM (one of DER, NET or PEM)
  * -outform arg - output format - default PEM

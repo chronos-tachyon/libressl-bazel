@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/x509.h"
+#include <openssl/asn1t.h>
+#include <openssl/x509.h>
 
 static const ASN1_TEMPLATE X509_VAL_seq_tt[] = {
 	{

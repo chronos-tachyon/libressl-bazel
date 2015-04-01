@@ -58,12 +58,12 @@
 
 #include <stdio.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 /* Handle 'other' PEMs: not private keys */
 

@@ -52,7 +52,7 @@
 #ifndef HEADER_GOST_ASN1_H
 #define HEADER_GOST_ASN1_H
 
-#include "openssl/asn1.h"
+#include <openssl/asn1.h>
 
 typedef struct {
 	ASN1_OCTET_STRING *encrypted_key;

@@ -60,9 +60,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/err.h"
-#include "openssl/objects.h"
+#include <openssl/asn1.h>
+#include <openssl/err.h>
+#include <openssl/objects.h>
 
 static STACK_OF(ASN1_STRING_TABLE) *stable = NULL;
 static void st_free(ASN1_STRING_TABLE *tbl);

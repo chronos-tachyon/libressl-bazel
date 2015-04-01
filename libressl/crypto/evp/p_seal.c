@@ -59,14 +59,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_RSA
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 #endif
 
 int

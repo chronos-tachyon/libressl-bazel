@@ -57,10 +57,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/asn1t.h"
-#include "openssl/err.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/asn1t.h>
+#include <openssl/err.h>
+#include <openssl/x509.h>
 
 #include "asn1_locl.h"
 

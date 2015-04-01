@@ -59,8 +59,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "openssl/err.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/x509.h>
 
 #include "asn1_locl.h"
 

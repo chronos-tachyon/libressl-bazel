@@ -2,14 +2,14 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_WHIRLPOOL
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
-#include "openssl/whrlpool.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
+#include <openssl/whrlpool.h>
 
 static int
 init(EVP_MD_CTX *ctx)

@@ -58,16 +58,16 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bn.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/rsa.h"
+#include <openssl/bn.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/rsa.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 static const RSA_METHOD *default_RSA_meth = NULL;

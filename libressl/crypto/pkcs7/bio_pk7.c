@@ -52,9 +52,9 @@
  *
  */
 
-#include "openssl/asn1.h"
-#include "openssl/pkcs7.h"
-#include "openssl/bio.h"
+#include <openssl/asn1.h>
+#include <openssl/pkcs7.h>
+#include <openssl/bio.h>
 
 #include <stdio.h>
 

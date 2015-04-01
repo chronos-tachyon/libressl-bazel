@@ -60,10 +60,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 static int add_attribute(STACK_OF(X509_ATTRIBUTE) **sk, int nid, int atrtype,
     void *value);

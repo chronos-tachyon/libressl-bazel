@@ -21,10 +21,10 @@
 #include <string.h>
 #include <err.h>
 
-#include "openssl/bn.h"
-#include "openssl/crypto.h"
-#include "openssl/dh.h"
-#include "openssl/err.h"
+#include <openssl/bn.h>
+#include <openssl/crypto.h>
+#include <openssl/dh.h>
+#include <openssl/err.h>
 
 /*
  * Test for proper bn_mul_mont behaviour when operands are of vastly different

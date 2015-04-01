@@ -151,14 +151,14 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
-#include "openssl/bio.h"
-#include "openssl/buffer.h"
-#include "openssl/dsa.h"
-#include "openssl/err.h"
-#include "openssl/rsa.h"
-#include "openssl/ssl.h"
-#include "openssl/stack.h"
+#include <openssl/opensslconf.h>
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
+#include <openssl/dsa.h>
+#include <openssl/err.h>
+#include <openssl/rsa.h>
+#include <openssl/ssl.h>
+#include <openssl/stack.h>
 
 #define c2l(c,l)	(l = ((unsigned long)(*((c)++)))     , \
 			 l|=(((unsigned long)(*((c)++)))<< 8), \

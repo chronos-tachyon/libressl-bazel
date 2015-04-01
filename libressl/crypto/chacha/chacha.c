@@ -17,7 +17,7 @@
 
 #include <stdint.h>
 
-#include "openssl/chacha.h"
+#include <openssl/chacha.h>
 /* $OpenBSD: chacha-merged.c,v 1.6 2014/06/24 18:12:09 jsing Exp $ */
 /*
 chacha-merged.c version 20080118

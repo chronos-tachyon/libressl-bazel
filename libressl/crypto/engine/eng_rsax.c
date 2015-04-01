@@ -62,19 +62,19 @@
  * Hudson (tjh@cryptsoft.com).
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/crypto.h"
-#include "openssl/buffer.h"
-#include "openssl/engine.h"
+#include <openssl/crypto.h>
+#include <openssl/buffer.h>
+#include <openssl/engine.h>
 #ifndef OPENSSL_NO_RSA
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 #endif
-#include "openssl/bn.h"
-#include "openssl/err.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
 
 /* RSAX is available **ONLY* on x86_64 CPUs */
 #undef COMPILE_RSAX

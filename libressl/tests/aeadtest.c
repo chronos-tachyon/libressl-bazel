@@ -52,7 +52,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "openssl/evp.h"
+#include <openssl/evp.h>
 
 /* This program tests an AEAD against a series of test vectors from a file. The
  * test vector file consists of key-value lines where the key and value are

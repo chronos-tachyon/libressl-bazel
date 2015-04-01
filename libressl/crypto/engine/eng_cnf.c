@@ -58,10 +58,10 @@
 
 #include <string.h>
 
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 #include "eng_int.h"
-#include "openssl/conf.h"
+#include <openssl/conf.h>
 
 /* #define ENGINE_CONF_DEBUG */
 

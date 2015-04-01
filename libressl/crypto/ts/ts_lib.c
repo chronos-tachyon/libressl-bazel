@@ -59,10 +59,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/bn.h"
-#include "openssl/objects.h"
-#include "openssl/ts.h"
-#include "openssl/x509v3.h"
+#include <openssl/bn.h>
+#include <openssl/objects.h>
+#include <openssl/ts.h>
+#include <openssl/x509v3.h>
 
 /* Local function declarations. */
 

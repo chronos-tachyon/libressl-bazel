@@ -64,9 +64,9 @@
 
 #include <stdio.h>
 
-#include "openssl/objects.h"
+#include <openssl/objects.h>
 
-#include "libressl/pqueue.h"
+#include "pqueue.h"
 #include "ssl_locl.h"
 
 int dtls1_listen(SSL *s, struct sockaddr *client);

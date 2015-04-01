@@ -117,9 +117,9 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/evp.h"
-#include "openssl/hmac.h"
-#include "openssl/md5.h"
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
+#include <openssl/md5.h>
 
 /* dtls1_enc encrypts/decrypts the record in |s->wrec| / |s->rrec|, respectively.
  *

@@ -59,10 +59,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/conf.h"
-#include "openssl/err.h"
-#include "openssl/x509v3.h"
+#include <openssl/asn1.h>
+#include <openssl/conf.h>
+#include <openssl/err.h>
+#include <openssl/x509v3.h>
 
 static char *i2s_ASN1_IA5STRING(X509V3_EXT_METHOD *method, ASN1_IA5STRING *ia5);
 static ASN1_IA5STRING *s2i_ASN1_IA5STRING(X509V3_EXT_METHOD *method,

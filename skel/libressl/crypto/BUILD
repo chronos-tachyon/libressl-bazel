@@ -20,25 +20,25 @@ UNKNOWN_OPTS = [
 ]
 
 I386_SRCS = [
-    "bf/bf_cbc.c",
+    "bf/bf_enc.c",
     "des/fcrypt_b.c",
     "whrlpool/wp_block.c",
 ]
 I386_OPTS = [
-    "-DAES_ASM",
-    "-DVPAES_ASM",
+    "-DOPENSSL_CPUID_OBJ",
     "-DOPENSSL_IA32_SSE2",
     "-DOPENSSL_BN_ASM_PART_WORDS",
     "-DOPENSSL_BN_ASM_MONT",
     "-DOPENSSL_BN_ASM_GF2m",
-    "-DMD5_ASM",
+    "-DAES_ASM",
+    "-DVPAES_ASM",
     "-DGHASH_ASM",
+    "-DMD5_ASM",
     "-DRMD160_ASM",
     "-DSHA1_ASM",
     "-DSHA256_ASM",
     "-DSHA512_ASM",
     "-DWHIRLPOOL_ASM",
-    "-DOPENSSL_CPUID_OBJ",
 ]
 
 AMD64_SRCS = [
@@ -49,39 +49,44 @@ AMD64_SRCS = [
     "des/fcrypt_b.c",
 ]
 AMD64_OPTS = [
-    "-DAES_ASM",
-    "-DBSAES_ASM",
-    "-DVPAES_ASM",
+    "-DOPENSSL_CPUID_OBJ",
     "-DOPENSSL_IA32_SSE2",
-    "-DRSA_ASM",
     "-DOPENSSL_BN_ASM_MONT",
     "-DOPENSSL_BN_ASM_MONT5",
     "-DOPENSSL_BN_ASM_GF2m",
-    "-DMD5_ASM",
+    "-DAES_ASM",
+    "-DBSAES_ASM",
+    "-DVPAES_ASM",
     "-DGHASH_ASM",
+    "-DMD5_ASM",
     "-DRC4_MD5_ASM",
+    "-DRSA_ASM",
     "-DSHA1_ASM",
     "-DSHA256_ASM",
     "-DSHA512_ASM",
     "-DWHIRLPOOL_ASM",
-    "-DOPENSSL_CPUID_OBJ",
 ]
 
-PICKY_SRCS = UNKNOWN_SRCS + I386_SRCS + AMD64_SRCS
-GENERIC_SRCS = glob(["**/*.c", "**/*.h"], exclude=PICKY_SRCS)
+DONOTWANT_SRCS = ["bf/bf_cbc.c"]
 
+GENERIC_SRCS = glob(
+    ["**/*.c", "**/*.h"],
+    exclude=UNKNOWN_SRCS + I386_SRCS + AMD64_SRCS + DONOTWANT_SRCS,
+)
 GENERIC_COPTS = [
-    "-DNULL=((void*)0)",
-    "-Ilibressl/compat",
+    "-Ilibressl/include",
     "-Ilibressl/crypto",
     "-Ilibressl/crypto/asn1",
     "-Ilibressl/crypto/evp",
     "-Ilibressl/crypto/modes",
+    "-DHAVE_GETAUXVAL",
+    "-DHAVE_VA_COPY",
+    "-DLIBRESSL_INTERNAL",
 ]
 
 cc_library(
     name = "crypto",
-    hdrs = ["//openssl:libcrypto_headers"],
+    hdrs = ["//libressl/include:libcrypto"],
     srcs = select({
       "//libressl:asm-i386-elf": GENERIC_SRCS + I386_SRCS + glob(["**/*-elf-x86.S"]),
       "//libressl:asm-i386-macosx": GENERIC_SRCS + I386_SRCS + glob(["**/*-macosx-x86.S"]),
@@ -89,7 +94,6 @@ cc_library(
       "//libressl:asm-amd64-macosx": GENERIC_SRCS + AMD64_SRCS + glob(["**/*-macosx-x86_64.S"]),
       "//conditions:default": GENERIC_SRCS + UNKNOWN_SRCS,
     }),
-    deps = ["//libressl/compat"],
     copts = select({
       "//libressl:asm-i386-elf": GENERIC_COPTS + I386_OPTS,
       "//libressl:asm-i386-macosx": GENERIC_COPTS + I386_OPTS,
@@ -97,5 +101,16 @@ cc_library(
       "//libressl:asm-amd64-macosx": GENERIC_COPTS + AMD64_OPTS,
       "//conditions:default": GENERIC_COPTS + UNKNOWN_OPTS,
     }),
-    visibility = ["//libressl:__pkg__"],
+    deps = [":headers"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "headers",
+    hdrs = [
+      "//libressl/include:compat",
+      "//libressl/include:libcrypto",
+    ],
+    includes = ["libressl/include"],
+    visibility = ["//visibility:public"],
 )

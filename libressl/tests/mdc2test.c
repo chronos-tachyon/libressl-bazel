@@ -60,8 +60,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/evp.h"
-#include "openssl/mdc2.h"
+#include <openssl/evp.h>
+#include <openssl/mdc2.h>
 
 static unsigned char pad1[16]={
 	0x42,0xE5,0x0C,0xD2,0x24,0xBA,0xCE,0xBA,

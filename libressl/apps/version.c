@@ -115,24 +115,24 @@
 
 #include "apps.h"
 
-#include "openssl/bn.h"
-#include "openssl/crypto.h"
-#include "openssl/evp.h"
+#include <openssl/bn.h>
+#include <openssl/crypto.h>
+#include <openssl/evp.h>
 
 #ifndef OPENSSL_NO_BF
-#include "openssl/blowfish.h"
+#include <openssl/blowfish.h>
 #endif
 
 #ifndef OPENSSL_NO_DES
-#include "openssl/des.h"
+#include <openssl/des.h>
 #endif
 
 #ifndef OPENSSL_NO_IDEA
-#include "openssl/idea.h"
+#include <openssl/idea.h>
 #endif
 
 #ifndef OPENSSL_NO_RC4
-#include "openssl/rc4.h"
+#include <openssl/rc4.h>
 #endif
 
 static struct {

@@ -49,13 +49,13 @@
  * ====================================================================
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_GOST
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/gost.h"
-#include "openssl/objects.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/gost.h>
+#include <openssl/objects.h>
 #include "gost_locl.h"
 
 struct gost_key_st {

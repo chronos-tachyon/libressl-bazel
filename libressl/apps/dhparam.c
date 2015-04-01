@@ -109,7 +109,7 @@
  *
  */
 
-#include "openssl/opensslconf.h"	/* for OPENSSL_NO_DH */
+#include <openssl/opensslconf.h>	/* for OPENSSL_NO_DH */
 
 #ifndef OPENSSL_NO_DH
 
@@ -120,14 +120,14 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/dh.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/dh.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
-#include "openssl/dsa.h"
+#include <openssl/dsa.h>
 
 #define DEFBITS	512
 

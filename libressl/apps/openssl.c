@@ -117,17 +117,17 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/conf.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/pem.h"
-#include "openssl/ssl.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/conf.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/pem.h>
+#include <openssl/ssl.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 #include "progs.h"

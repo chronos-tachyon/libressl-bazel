@@ -64,11 +64,11 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/x509.h>
 
 # include <sys/stat.h>
 

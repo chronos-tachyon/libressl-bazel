@@ -58,16 +58,16 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_SHA
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/sha.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/sha.h>
 
 #ifndef OPENSSL_NO_RSA
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 #endif
 
 static int

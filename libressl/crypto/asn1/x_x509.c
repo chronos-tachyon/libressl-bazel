@@ -58,12 +58,12 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/evp.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/asn1t.h>
+#include <openssl/evp.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 static const ASN1_AUX X509_CINF_aux = {
 	.flags = ASN1_AFLG_ENCODING,

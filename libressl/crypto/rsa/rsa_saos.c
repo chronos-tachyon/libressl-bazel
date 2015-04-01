@@ -59,11 +59,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/rsa.h"
-#include "openssl/x509.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/rsa.h>
+#include <openssl/x509.h>
 
 int
 RSA_sign_ASN1_OCTET_STRING(int type, const unsigned char *m, unsigned int m_len,

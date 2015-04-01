@@ -63,9 +63,9 @@
 
 #include <stdio.h>
 
-#include "openssl/bn.h"
-#include "openssl/dh.h"
-#include "openssl/err.h"
+#include <openssl/bn.h>
+#include <openssl/dh.h>
+#include <openssl/err.h>
 
 static int dh_builtin_genparams(DH *ret, int prime_len, int generator,
 	    BN_GENCB *cb);

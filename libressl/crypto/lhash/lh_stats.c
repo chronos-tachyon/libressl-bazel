@@ -60,12 +60,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_BIO
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 #endif
-#include "openssl/lhash.h"
+#include <openssl/lhash.h>
 
 #ifdef OPENSSL_NO_BIO
 

@@ -53,8 +53,8 @@
 
 #include "apps.h"
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
 
 struct {
 	int bits;

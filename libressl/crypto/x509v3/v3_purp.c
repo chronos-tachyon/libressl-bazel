@@ -59,11 +59,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
-#include "openssl/x509v3.h"
-#include "openssl/x509_vfy.h"
+#include <openssl/err.h>
+#include <openssl/x509v3.h>
+#include <openssl/x509_vfy.h>
 
 static void x509v3_cache_extensions(X509 *x);
 

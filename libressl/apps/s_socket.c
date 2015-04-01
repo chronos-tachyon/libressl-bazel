@@ -69,7 +69,7 @@
 
 #include "apps.h"
 
-#include "openssl/ssl.h"
+#include <openssl/ssl.h>
 
 #include "s_apps.h"
 

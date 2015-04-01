@@ -63,9 +63,9 @@
 #include "apps.h"
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
-#include "openssl/err.h"
-#include "openssl/ssl.h"
+#include <openssl/engine.h>
+#include <openssl/err.h>
+#include <openssl/ssl.h>
 
 static const char *engine_usage[] = {
 	"usage: engine opts [engine ...]\n",

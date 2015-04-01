@@ -57,10 +57,10 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bn.h"
-#include "openssl/dh.h"
+#include <openssl/bn.h>
+#include <openssl/dh.h>
 
 #ifndef OPENSSL_NO_DEPRECATED
 DH *

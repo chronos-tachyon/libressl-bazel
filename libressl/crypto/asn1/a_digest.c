@@ -61,10 +61,10 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/x509.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/x509.h>
 
 int
 ASN1_item_digest(const ASN1_ITEM *it, const EVP_MD *type, void *asn,

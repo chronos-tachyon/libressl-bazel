@@ -59,12 +59,12 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_SHA
 
-#include "openssl/bn.h"
-#include "openssl/dsa.h"
+#include <openssl/bn.h>
+#include <openssl/dsa.h>
 
 static int dsa_builtin_keygen(DSA *dsa);
 

@@ -50,13 +50,13 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
-#include "openssl/evp.h"
+#include <openssl/opensslconf.h>
+#include <openssl/evp.h>
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
-#include "openssl/conf.h"
+#include <openssl/err.h>
+#include <openssl/conf.h>
 
 static void
 hexdump(FILE *f, const char *title, const unsigned char *s, int l)

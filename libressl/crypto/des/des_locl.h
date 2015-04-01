@@ -66,9 +66,9 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/des.h"
+#include <openssl/des.h>
 
 #define ITERATIONS 16
 #define HALF_ITERATIONS 8

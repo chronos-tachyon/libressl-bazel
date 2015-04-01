@@ -113,13 +113,13 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bio.h"
-#include "openssl/buffer.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
 
 DECLARE_LHASH_OF(ERR_STRING_DATA);
 DECLARE_LHASH_OF(ERR_STATE);

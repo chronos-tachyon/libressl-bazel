@@ -60,10 +60,10 @@
 
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/pkcs7.h"
-#include "openssl/ts.h"
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/pkcs7.h>
+#include <openssl/ts.h>
 
 /* Private function declarations. */
 

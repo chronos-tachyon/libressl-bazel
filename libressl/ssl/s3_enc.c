@@ -139,8 +139,8 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/evp.h"
-#include "openssl/md5.h"
+#include <openssl/evp.h>
+#include <openssl/md5.h>
 
 static unsigned char ssl3_pad_1[48] = {
 	0x36, 0x36, 0x36, 0x36, 0x36, 0x36, 0x36, 0x36,

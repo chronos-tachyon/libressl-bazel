@@ -22,15 +22,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #if !defined(OPENSSL_NO_SHA) && !defined(OPENSSL_NO_SHA1)
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/rsa.h"
-#include "openssl/sha.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/rsa.h>
+#include <openssl/sha.h>
 
 static int MGF1(unsigned char *mask, long len, const unsigned char *seed,
     long seedlen);

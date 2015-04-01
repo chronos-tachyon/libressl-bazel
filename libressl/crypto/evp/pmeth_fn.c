@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
 
 #include "evp_locl.h"
 

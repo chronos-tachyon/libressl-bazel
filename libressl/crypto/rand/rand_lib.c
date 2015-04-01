@@ -17,9 +17,9 @@
 
 #include <stdlib.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/rand.h"
+#include <openssl/rand.h>
 
 /*
  * The useful functions in this file are at the bottom.

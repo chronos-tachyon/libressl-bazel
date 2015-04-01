@@ -111,11 +111,11 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_SHA
 

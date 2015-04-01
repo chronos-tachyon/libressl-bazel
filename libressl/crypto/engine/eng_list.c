@@ -64,9 +64,9 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 #include "cryptlib.h"
 #include "eng_int.h"

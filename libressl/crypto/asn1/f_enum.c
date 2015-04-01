@@ -58,9 +58,9 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/asn1.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 /* Based on a_int.c: equivalent ENUMERATED functions */
 

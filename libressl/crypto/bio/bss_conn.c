@@ -66,9 +66,9 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 #define SOCKET_PROTOCOL IPPROTO_TCP
 

@@ -58,7 +58,7 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 #include "bn_lcl.h"
 

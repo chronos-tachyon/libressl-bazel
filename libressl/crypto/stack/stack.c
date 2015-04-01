@@ -59,8 +59,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/objects.h"
-#include "openssl/stack.h"
+#include <openssl/objects.h>
+#include <openssl/stack.h>
 
 #undef MIN_NODES
 #define MIN_NODES	4

@@ -111,10 +111,10 @@
 
 #include <stdio.h>
 
-#include "openssl/evp.h"
-#include "openssl/hmac.h"
-#include "openssl/objects.h"
-#include "openssl/ocsp.h"
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
+#include <openssl/objects.h>
+#include <openssl/ocsp.h>
 
 #include "ssl_locl.h"
 

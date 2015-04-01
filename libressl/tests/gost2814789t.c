@@ -22,13 +22,13 @@ int main(int argc, char *argv[])
 #include <stdlib.h>
 #include <string.h>
 #include <inttypes.h>
-#include "openssl/conf.h"
-#include "openssl/crypto.h"
-#include "openssl/engine.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/hmac.h"
-#include "openssl/obj_mac.h"
+#include <openssl/conf.h>
+#include <openssl/crypto.h>
+#include <openssl/engine.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
+#include <openssl/obj_mac.h>
 
 #define G89_MAX_TC_LEN	(2048)
 #define G89_BLOCK_LEN (8)

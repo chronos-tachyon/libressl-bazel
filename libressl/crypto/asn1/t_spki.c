@@ -58,17 +58,17 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1.h"
-#include "openssl/bn.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/bn.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_DSA
-#include "openssl/dsa.h"
+#include <openssl/dsa.h>
 #endif
 #ifndef OPENSSL_NO_RSA
-#include "openssl/rsa.h"
+#include <openssl/rsa.h>
 #endif
 
 /* Print out an SPKI */

@@ -69,12 +69,12 @@
 /* Needs to be included before the openssl headers! */
 #include "apps.h"
 
-#include "openssl/bn.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/ssl.h"
-#include "openssl/x509v3.h"
+#include <openssl/bn.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/ssl.h>
+#include <openssl/x509v3.h>
 
 /* Maximum leeway in validity period: default 5 minutes */
 #define MAX_VALIDITY_PERIOD	(5 * 60)

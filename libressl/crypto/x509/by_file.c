@@ -61,11 +61,11 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/lhash.h"
-#include "openssl/x509.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/lhash.h>
+#include <openssl/x509.h>
 
 static int by_file_ctrl(X509_LOOKUP *ctx, int cmd, const char *argc,
     long argl, char **ret);

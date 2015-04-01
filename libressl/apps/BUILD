@@ -3,12 +3,20 @@
 
 cc_binary(
     name = "openssl",
-    srcs = glob(["*.c", "*.h"], exclude=["certhash_disabled.c"]),
-    deps = [
-      "//libressl:libcrypto",
-      "//libressl:libssl",
-      "//libressl:libtls",
+    srcs = glob(
+      ["*.c", "*.h"],
+      exclude=[
+        "cms.c",
+        "certhash_disabled.c",
+      ],
+    ),
+    copts = [
+      "-Ilibressl/include",
+      "-DHAVE_POLL",
+      "-DLIBRESSL_INTERNAL",
+      "-include", "stdlib.h",
+      "-include", "stdint.h",
     ],
-    copts = ["-DLIBRESSL_INTERNAL"],
-    visibility = ["//libressl:__pkg__"],
+    deps = ["//libressl"],
+    visibility = ["//visibility:public"],
 )

@@ -3,18 +3,24 @@
 
 cc_library(
     name = "ssl",
-    hdrs = [
-      "//libressl:libtls_headers",
-      "//openssl:libssl_headers",
+    hdrs = ["//libressl/include:libssl"],
+    srcs = glob(["**/*.c", "**/*.h"]),
+    copts = [
+      "-Ilibressl/include",
+      "-Ilibressl/include/openssl",
+      "-DLIBRESSL_INTERNAL",
     ],
-    srcs = glob([
-      "**/*.c",
-      "**/*.h",
-    ]),
     deps = [
-      "//libressl:libcrypto",
-      "//libressl/compat",
+      ":headers",
+      "//libressl/include:pqueue",
+      "//libressl/crypto",
     ],
-    copts = ["-Ilibressl/compat"],
-    visibility = ["//libressl:__pkg__"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "headers",
+    hdrs = ["//libressl/include:libssl"],
+    includes = ["libressl/include"],
+    visibility = ["//visibility:public"],
 )

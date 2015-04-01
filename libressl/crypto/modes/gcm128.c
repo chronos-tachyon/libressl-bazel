@@ -50,7 +50,7 @@
 
 #define OPENSSL_FIPSAPI
 
-#include "openssl/crypto.h"
+#include <openssl/crypto.h>
 #include "modes_lcl.h"
 #include <string.h>
 

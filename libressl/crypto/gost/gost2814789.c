@@ -51,11 +51,11 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_GOST
-#include "openssl/objects.h"
-#include "openssl/gost.h"
+#include <openssl/objects.h>
+#include <openssl/gost.h>
 
 #include "gost_locl.h"
 

@@ -52,12 +52,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_AES
-#include "openssl/aes.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
+#include <openssl/aes.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
 
 #include "evp_locl.h"
 #include "modes_lcl.h"

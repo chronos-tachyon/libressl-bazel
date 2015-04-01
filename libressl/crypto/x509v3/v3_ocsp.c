@@ -59,15 +59,15 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_OCSP
 
-#include "openssl/asn1.h"
-#include "openssl/conf.h"
-#include "openssl/err.h"
-#include "openssl/ocsp.h"
-#include "openssl/x509v3.h"
+#include <openssl/asn1.h>
+#include <openssl/conf.h>
+#include <openssl/err.h>
+#include <openssl/ocsp.h>
+#include <openssl/x509v3.h>
 
 /* OCSP extensions and a couple of CRL entry extensions
  */

@@ -60,12 +60,12 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "openssl/asn1.h"
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 const char *
 X509_verify_cert_error_string(long n)

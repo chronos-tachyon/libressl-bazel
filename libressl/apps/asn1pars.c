@@ -67,10 +67,10 @@
 
 #include "apps.h"
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 static struct {
 	char *derfile;

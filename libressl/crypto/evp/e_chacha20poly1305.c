@@ -18,14 +18,14 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #if !defined(OPENSSL_NO_CHACHA) && !defined(OPENSSL_NO_POLY1305)
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/chacha.h"
-#include "openssl/poly1305.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/chacha.h>
+#include <openssl/poly1305.h>
 
 #include "evp_locl.h"
 

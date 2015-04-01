@@ -56,11 +56,11 @@
  *
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_DEPRECATED
 
-#include "openssl/evp.h"
+#include <openssl/evp.h>
 
 /* Define some deprecated functions, so older programs
    don't crash and burn too quickly.  On Windows and VMS,

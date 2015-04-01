@@ -61,8 +61,8 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 /* XXX - these are here to avoid including asn1_mac.h */
 int asn1_GetSequence(ASN1_const_CTX *c, long *length);

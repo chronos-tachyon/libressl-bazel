@@ -56,9 +56,9 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/cast.h"
+#include <openssl/cast.h>
 #include "cast_lcl.h"
-#include "openssl/opensslv.h"
+#include <openssl/opensslv.h>
 
 void CAST_ecb_encrypt(const unsigned char *in, unsigned char *out,
 		      const CAST_KEY *ks, int enc)

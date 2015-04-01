@@ -56,7 +56,7 @@
  *
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 /* This file contains a table of "standard" extensions */
 

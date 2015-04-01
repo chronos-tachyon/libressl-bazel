@@ -60,7 +60,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "libressl/pqueue.h"
+#include "pqueue.h"
 
 typedef struct _pqueue {
 	pitem *items;

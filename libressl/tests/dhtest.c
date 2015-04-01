@@ -66,12 +66,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/crypto.h"
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
+#include <openssl/crypto.h>
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
 
-#include "openssl/dh.h"
+#include <openssl/dh.h>
 
 static int cb(int p, int n, BN_GENCB *arg);
 

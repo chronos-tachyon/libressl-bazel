@@ -60,10 +60,10 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
-#include "openssl/ts.h"
+#include <openssl/err.h>
+#include <openssl/ts.h>
 
 /* BEGIN ERROR CODES */
 #ifndef OPENSSL_NO_ERR

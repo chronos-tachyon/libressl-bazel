@@ -60,9 +60,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/hmac.h"
+#include <openssl/hmac.h>
 #ifndef OPENSSL_NO_MD5
-#include "openssl/md5.h"
+#include <openssl/md5.h>
 #endif
 
 #ifndef OPENSSL_NO_MD5

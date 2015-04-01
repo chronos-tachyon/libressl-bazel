@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
+#include <openssl/asn1.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
 
 ASN1_INTEGER *
 ASN1_INTEGER_dup(const ASN1_INTEGER *x)

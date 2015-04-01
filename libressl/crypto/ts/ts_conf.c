@@ -58,15 +58,15 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/ts.h"
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/ts.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 /* Macro definitions for the configuration file. */

@@ -56,16 +56,16 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/crypto.h"
+#include <openssl/crypto.h>
 
 #if !defined(OPENSSL_NO_SHA0) && !defined(OPENSSL_NO_SHA)
 
 #undef  SHA_1
 #define SHA_0
 
-#include "openssl/opensslv.h"
+#include <openssl/opensslv.h>
 
 /* The implementation is in ../md32_common.h */
 

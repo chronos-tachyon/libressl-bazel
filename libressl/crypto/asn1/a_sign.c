@@ -114,12 +114,12 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "openssl/bn.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/bn.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 #include "asn1_locl.h"
 

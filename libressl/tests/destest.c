@@ -62,7 +62,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "openssl/des.h"
+#include <openssl/des.h>
 
 #define crypt(c,s) (DES_crypt((c),(s)))
 

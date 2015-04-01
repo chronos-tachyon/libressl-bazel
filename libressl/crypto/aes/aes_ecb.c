@@ -55,7 +55,7 @@
 # endif
 #endif
 
-#include "openssl/aes.h"
+#include <openssl/aes.h>
 #include "aes_locl.h"
 
 void

@@ -69,7 +69,7 @@
  *
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_EC
 
@@ -80,12 +80,12 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/ec.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/ec.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 static int ecparam_print_var(BIO *, BIGNUM *, const char *, int,
     unsigned char *);

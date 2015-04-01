@@ -58,10 +58,10 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 int
 EVP_VerifyFinal(EVP_MD_CTX *ctx, const unsigned char *sigbuf,

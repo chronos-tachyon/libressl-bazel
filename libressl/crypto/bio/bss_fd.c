@@ -61,9 +61,9 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 
 static int fd_write(BIO *h, const char *buf, int num);
 static int fd_read(BIO *h, char *buf, int size);

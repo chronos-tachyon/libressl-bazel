@@ -69,13 +69,13 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "ech_locl.h"
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 static const ECDH_METHOD *default_ECDH_method = NULL;
 

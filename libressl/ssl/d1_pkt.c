@@ -120,10 +120,10 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
 
-#include "libressl/pqueue.h"
+#include "pqueue.h"
 
 /* mod 128 saturating subtract of two 64-bit values in big-endian order */
 static int

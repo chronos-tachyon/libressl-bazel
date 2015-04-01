@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/chacha.h"
+#include <openssl/chacha.h>
 
 struct chacha_tv {
 	const char *desc;

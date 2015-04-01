@@ -152,18 +152,18 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/bn.h"
-#include "openssl/buffer.h"
-#include "openssl/dh.h"
-#include "openssl/evp.h"
-#include "openssl/md5.h"
-#include "openssl/objects.h"
+#include <openssl/bn.h>
+#include <openssl/buffer.h>
+#include <openssl/dh.h>
+#include <openssl/evp.h>
+#include <openssl/md5.h>
+#include <openssl/objects.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 #ifndef OPENSSL_NO_GOST
-#include "openssl/gost.h"
+#include <openssl/gost.h>
 #endif
 
 static const SSL_METHOD *ssl3_get_client_method(int ver);

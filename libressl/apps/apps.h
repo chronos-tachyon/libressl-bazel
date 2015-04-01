@@ -112,21 +112,21 @@
 #ifndef HEADER_APPS_H
 #define HEADER_APPS_H
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bio.h"
-#include "openssl/conf.h"
-#include "openssl/lhash.h"
-#include "openssl/ossl_typ.h"
-#include "openssl/txt_db.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/conf.h>
+#include <openssl/lhash.h>
+#include <openssl/ossl_typ.h>
+#include <openssl/txt_db.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 #ifndef OPENSSL_NO_OCSP
-#include "openssl/ocsp.h"
+#include <openssl/ocsp.h>
 #endif
 
 extern CONF *config;

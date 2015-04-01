@@ -18,10 +18,10 @@
 #include <err.h>
 #include <stdlib.h>
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
-#include "openssl/ssl.h"
-#include "openssl/tls1.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/ssl.h>
+#include <openssl/tls1.h>
 
 int i2d_SSL_SESSION(SSL_SESSION *in, unsigned char **pp);
 SSL_SESSION *d2i_SSL_SESSION(SSL_SESSION **a, const unsigned char **pp,

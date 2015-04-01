@@ -84,8 +84,8 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "openssl/camellia.h"
-#include "openssl/opensslconf.h"
+#include <openssl/camellia.h>
+#include <openssl/opensslconf.h>
 
 #include "cmll_locl.h"
 

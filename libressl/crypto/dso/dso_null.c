@@ -61,7 +61,7 @@
 
 #include <stdio.h>
 
-#include "openssl/dso.h"
+#include <openssl/dso.h>
 
 static DSO_METHOD dso_meth_null = {
 	.name = "NULL shared library method"

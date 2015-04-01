@@ -35,7 +35,7 @@
 #endif
 
 #include <stdlib.h>
-#include "openssl/aes.h"
+#include <openssl/aes.h>
 #include "aes_locl.h"
 
 #ifndef AES_ASM

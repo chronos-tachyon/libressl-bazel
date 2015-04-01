@@ -58,9 +58,9 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1.h"
-#include "openssl/buffer.h"
-#include "openssl/objects.h"
+#include <openssl/asn1.h>
+#include <openssl/buffer.h>
+#include <openssl/objects.h>
 
 static int asn1_print_info(BIO *bp, int tag, int xclass, int constructed,
     int indent);

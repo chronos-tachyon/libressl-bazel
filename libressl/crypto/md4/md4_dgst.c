@@ -57,8 +57,8 @@
  */
 
 #include <stdio.h>
-#include "openssl/opensslv.h"
-#include "openssl/crypto.h"
+#include <openssl/opensslv.h>
+#include <openssl/crypto.h>
 #include "md4_locl.h"
 
 /* Implemented from RFC1186 The MD4 Message-Digest Algorithm

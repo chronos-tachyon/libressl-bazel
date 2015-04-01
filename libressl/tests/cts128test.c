@@ -9,8 +9,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/aes.h"
-#include "openssl/modes.h"
+#include <openssl/aes.h>
+#include <openssl/modes.h>
 
 void test_vector(const unsigned char *vector,size_t len);
 void test_nistvector(const unsigned char *vector,size_t len);

@@ -60,9 +60,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/err.h"
-#include "openssl/x509.h"
+#include <openssl/asn1t.h>
+#include <openssl/err.h>
+#include <openssl/x509.h>
 
 /* PKCS#5 v2.0 password based encryption structures */
 

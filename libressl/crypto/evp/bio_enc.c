@@ -60,8 +60,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
 
 static int enc_write(BIO *h, const char *buf, int num);
 static int enc_read(BIO *h, char *buf, int size);

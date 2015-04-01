@@ -61,8 +61,8 @@
 
 #include "apps.h"
 
-#include "openssl/err.h"
-#include "openssl/pem.h"
+#include <openssl/err.h>
+#include <openssl/pem.h>
 
 int nseq_main(int, char **);
 

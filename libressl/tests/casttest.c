@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "openssl/opensslconf.h" /* To see if OPENSSL_NO_CAST is defined */
+#include <openssl/opensslconf.h> /* To see if OPENSSL_NO_CAST is defined */
 
-#include "openssl/cast.h"
+#include <openssl/cast.h>
 
 #define FULL_TEST
 

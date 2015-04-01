@@ -55,14 +55,14 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "ecs_locl.h"
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
-#include "openssl/bn.h"
+#include <openssl/err.h>
+#include <openssl/bn.h>
 
 static const ECDSA_METHOD *default_ECDSA_method = NULL;
 

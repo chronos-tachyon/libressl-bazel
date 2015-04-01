@@ -59,11 +59,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/buffer.h"
-#include "openssl/crypto.h"
-#include "openssl/lhash.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/buffer.h>
+#include <openssl/crypto.h>
+#include <openssl/lhash.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 /* X509_VERIFY_PARAM functions */
 

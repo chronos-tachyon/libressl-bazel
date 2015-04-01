@@ -118,7 +118,7 @@
 
 #include <sys/ioctl.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include <errno.h>
 #include <signal.h>

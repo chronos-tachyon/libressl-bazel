@@ -26,10 +26,10 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 #include "apps.h"
 

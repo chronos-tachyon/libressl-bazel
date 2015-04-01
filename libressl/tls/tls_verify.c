@@ -22,7 +22,7 @@
 
 #include <string.h>
 
-#include "openssl/x509v3.h"
+#include <openssl/x509v3.h>
 
 #include "tls_internal.h"
 

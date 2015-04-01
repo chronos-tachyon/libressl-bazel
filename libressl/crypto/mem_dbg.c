@@ -111,9 +111,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "openssl/crypto.h"
-#include "openssl/bio.h"
-#include "openssl/lhash.h"
+#include <openssl/crypto.h>
+#include <openssl/bio.h>
+#include <openssl/lhash.h>
 
 int
 CRYPTO_mem_ctrl(int mode)

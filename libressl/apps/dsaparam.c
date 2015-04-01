@@ -56,7 +56,7 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/opensslconf.h"	/* for OPENSSL_NO_DSA */
+#include <openssl/opensslconf.h>	/* for OPENSSL_NO_DSA */
 
 /* Until the key-gen callbacks are modified to use newer prototypes, we allow
  * deprecated functions for openssl-internal code */
@@ -72,12 +72,12 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/dsa.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/dsa.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 /* -inform arg	- input format - default PEM (DER or PEM)
  * -outform arg - output format - default PEM

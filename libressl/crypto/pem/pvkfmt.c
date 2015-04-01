@@ -63,15 +63,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
 
 #if !defined(OPENSSL_NO_RSA) && !defined(OPENSSL_NO_DSA)
-#include "openssl/dsa.h"
-#include "openssl/rsa.h"
+#include <openssl/dsa.h>
+#include <openssl/rsa.h>
 
 /* Utility function: read a DWORD (4 byte unsigned integer) in little endian
  * format

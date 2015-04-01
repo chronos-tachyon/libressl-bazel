@@ -51,13 +51,13 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_GOST
-#include "openssl/evp.h"
-#include "openssl/err.h"
-#include "openssl/gost.h"
-#include "openssl/x509v3.h" /* For string_to_hex */
+#include <openssl/evp.h>
+#include <openssl/err.h>
+#include <openssl/gost.h>
+#include <openssl/x509v3.h> /* For string_to_hex */
 
 #include "evp_locl.h"
 #include "gost_locl.h"

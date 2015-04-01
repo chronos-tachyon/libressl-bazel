@@ -58,9 +58,9 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1.h"
-#include "openssl/evp.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/evp.h>
+#include <openssl/x509.h>
 
 /* X509_CERT_AUX and string set routines
  */

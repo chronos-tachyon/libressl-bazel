@@ -59,8 +59,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/conf.h"
-#include "openssl/x509v3.h"
+#include <openssl/conf.h>
+#include <openssl/x509v3.h>
 
 int
 ASN1_BIT_STRING_name_print(BIO *out, ASN1_BIT_STRING *bs,

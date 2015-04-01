@@ -61,12 +61,12 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/buffer.h"
-#include "openssl/conf.h"
-#include "openssl/conf_api.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/stack.h"
+#include <openssl/buffer.h>
+#include <openssl/conf.h>
+#include <openssl/conf_api.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/stack.h>
 
 #include "conf_def.h"
 

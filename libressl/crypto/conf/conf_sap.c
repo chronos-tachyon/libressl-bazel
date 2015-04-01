@@ -58,16 +58,16 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1.h"
-#include "openssl/conf.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/conf.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 /* This is the automatic configuration loader: it is called automatically by

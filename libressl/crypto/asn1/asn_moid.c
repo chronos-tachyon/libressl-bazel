@@ -60,10 +60,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/conf.h"
-#include "openssl/crypto.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/conf.h>
+#include <openssl/crypto.h>
+#include <openssl/x509.h>
 
 /* Simple ASN1 OID module: add all objects in a given section */
 

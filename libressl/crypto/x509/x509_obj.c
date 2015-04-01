@@ -59,11 +59,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
 char *
 X509_NAME_oneline(X509_NAME *a, char *buf, int len)

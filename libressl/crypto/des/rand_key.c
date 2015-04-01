@@ -55,7 +55,7 @@
 
 #include <stdlib.h>
 
-#include "openssl/des.h"
+#include <openssl/des.h>
 
 int
 DES_random_key(DES_cblock *ret)

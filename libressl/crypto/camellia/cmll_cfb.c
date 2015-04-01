@@ -105,8 +105,8 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/camellia.h"
-#include "openssl/modes.h"
+#include <openssl/camellia.h>
+#include <openssl/modes.h>
 
 
 /*

@@ -57,11 +57,11 @@
  */
 
 #include <string.h>
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "ecs_locl.h"
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 /* returns

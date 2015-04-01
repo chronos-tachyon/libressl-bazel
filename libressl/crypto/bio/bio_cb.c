@@ -60,8 +60,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/bio.h"
+#include <openssl/err.h>
+#include <openssl/bio.h>
 
 long
 BIO_debug_callback(BIO *bio, int cmd, const char *argp, int argi, long argl,

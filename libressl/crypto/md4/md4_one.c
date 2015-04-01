@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "openssl/md4.h"
-#include "openssl/crypto.h"
+#include <openssl/md4.h>
+#include <openssl/crypto.h>
 
 unsigned char *MD4(const unsigned char *d, size_t n, unsigned char *md)
 	{

@@ -59,11 +59,11 @@
 #include <ctype.h>
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bio.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 #include "bn_lcl.h"
 

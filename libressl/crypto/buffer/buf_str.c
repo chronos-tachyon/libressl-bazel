@@ -19,8 +19,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 /*
  * XXX these functions accept a NULL arg and return NULL

@@ -61,8 +61,8 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
 
 int
 ssl23_write_bytes(SSL *s)

@@ -22,7 +22,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#include "libressl/tls.h"
+#include "tls.h"
 #include "tls_internal.h"
 
 /*

@@ -109,7 +109,7 @@
  *
  */
 #include <sys/types.h>
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #define PORT            4433
 #define PORT_STR        "4433"

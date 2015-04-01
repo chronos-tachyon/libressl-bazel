@@ -56,7 +56,7 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 /* Until the key-gen callbacks are modified to use newer prototypes, we allow
  * deprecated functions for openssl-internal code */
@@ -73,13 +73,13 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
-#include "openssl/rsa.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
+#include <openssl/rsa.h>
+#include <openssl/x509.h>
 
 #define DEFBITS	2048
 

@@ -18,8 +18,8 @@
 #include <limits.h>
 #include <string.h>
 
-#include "openssl/evp.h"
-#include "openssl/err.h"
+#include <openssl/evp.h>
+#include <openssl/err.h>
 
 #include "evp_locl.h"
 

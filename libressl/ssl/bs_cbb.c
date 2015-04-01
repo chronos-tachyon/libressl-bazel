@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "bytestring.h"
 

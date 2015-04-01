@@ -120,13 +120,13 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/dh.h"
-#include "openssl/objects.h"
-#include "openssl/opensslconf.h"
-#include "openssl/pem.h"
-#include "openssl/x509v3.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/dh.h>
+#include <openssl/objects.h>
+#include <openssl/opensslconf.h>
+#include <openssl/pem.h>
+#include <openssl/x509v3.h>
 
 #include "ssl_locl.h"
 

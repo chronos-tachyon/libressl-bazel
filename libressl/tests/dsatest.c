@@ -68,12 +68,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#include "openssl/crypto.h"
-#include "openssl/bio.h"
-#include "openssl/err.h"
-#include "openssl/bn.h"
+#include <openssl/crypto.h>
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/bn.h>
 
-#include "openssl/dsa.h"
+#include <openssl/dsa.h>
 
 static int dsa_cb(int p, int n, BN_GENCB *arg);
 

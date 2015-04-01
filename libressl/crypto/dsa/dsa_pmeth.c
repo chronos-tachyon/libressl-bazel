@@ -60,11 +60,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/x509.h"
+#include <openssl/asn1t.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/x509.h>
 
 #include "dsa_locl.h"
 #include "evp_locl.h"

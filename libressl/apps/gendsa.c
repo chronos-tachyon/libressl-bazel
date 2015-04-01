@@ -56,7 +56,7 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/opensslconf.h"	/* for OPENSSL_NO_DSA */
+#include <openssl/opensslconf.h>	/* for OPENSSL_NO_DSA */
 
 
 #include <sys/types.h>
@@ -67,12 +67,12 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/dsa.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/dsa.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 #define DEFBITS	512
 

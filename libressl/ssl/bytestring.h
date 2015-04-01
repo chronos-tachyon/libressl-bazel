@@ -24,7 +24,7 @@ extern "C" {
 #include <sys/types.h>
 #include <stdint.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 /*
  * Bytestrings are used for parsing and building TLS and ASN.1 messages.

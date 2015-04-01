@@ -58,10 +58,10 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/ts.h"
-#include "openssl/x509v3.h"
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/ts.h>
+#include <openssl/x509v3.h>
 
 int
 TS_REQ_set_version(TS_REQ *a, long version)

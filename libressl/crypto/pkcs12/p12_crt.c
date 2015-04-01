@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/pkcs12.h"
+#include <openssl/err.h>
+#include <openssl/pkcs12.h>
 
 static int pkcs12_add_bag(STACK_OF(PKCS12_SAFEBAG) **pbags,
     PKCS12_SAFEBAG *bag);

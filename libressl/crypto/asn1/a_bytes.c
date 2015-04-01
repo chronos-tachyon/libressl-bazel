@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/asn1.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 static int asn1_collate_primitive(ASN1_STRING *a, ASN1_const_CTX *c);
 /* type is a 'bitmap' of acceptable string types.

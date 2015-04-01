@@ -58,9 +58,9 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/evp.h"
-#include "openssl/x509.h"
+#include <openssl/asn1t.h>
+#include <openssl/evp.h>
+#include <openssl/x509.h>
 
 /* X509_CERT_AUX routines. These are used to encode additional
  * user modifiable data about a certificate. This data is

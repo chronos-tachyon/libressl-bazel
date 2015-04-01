@@ -14,8 +14,8 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include "openssl/bio.h"
-#include "openssl/evp.h"
+#include <openssl/bio.h>
+#include <openssl/evp.h>
 
 #include <err.h>
 #include <stdio.h>

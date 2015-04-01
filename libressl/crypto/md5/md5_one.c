@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "openssl/md5.h"
-#include "openssl/crypto.h"
+#include <openssl/md5.h>
+#include <openssl/crypto.h>
 
 unsigned char *MD5(const unsigned char *d, size_t n, unsigned char *md)
 	{

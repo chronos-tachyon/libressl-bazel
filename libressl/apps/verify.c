@@ -62,11 +62,11 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 static int cb(int ok, X509_STORE_CTX * ctx);
 static int check(X509_STORE * ctx, char *file, STACK_OF(X509) * uchain,

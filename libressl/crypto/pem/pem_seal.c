@@ -59,16 +59,16 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"	/* for OPENSSL_NO_RSA */
+#include <openssl/opensslconf.h>	/* for OPENSSL_NO_RSA */
 
 #ifndef OPENSSL_NO_RSA
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/pem.h"
-#include "openssl/rsa.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/pem.h>
+#include <openssl/rsa.h>
+#include <openssl/x509.h>
 
 int
 PEM_SealInit(PEM_ENCODE_SEAL_CTX *ctx, EVP_CIPHER *type, EVP_MD *md_type,

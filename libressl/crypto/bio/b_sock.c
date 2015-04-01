@@ -71,9 +71,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 int
 BIO_get_host_ip(const char *str, unsigned char *ip)

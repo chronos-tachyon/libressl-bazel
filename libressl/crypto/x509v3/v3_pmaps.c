@@ -59,10 +59,10 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/conf.h"
-#include "openssl/err.h"
-#include "openssl/x509v3.h"
+#include <openssl/asn1t.h>
+#include <openssl/conf.h>
+#include <openssl/err.h>
+#include <openssl/x509v3.h>
 
 static void *v2i_POLICY_MAPPINGS(const X509V3_EXT_METHOD *method,
     X509V3_CTX *ctx, STACK_OF(CONF_VALUE) *nval);

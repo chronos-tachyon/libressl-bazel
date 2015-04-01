@@ -56,8 +56,8 @@
  * [including the GNU Public Licence.]
  */
 
-#include "openssl/crypto.h"
-#include "openssl/opensslv.h"
+#include <openssl/crypto.h>
+#include <openssl/opensslv.h>
 
 #include "cryptlib.h"
 

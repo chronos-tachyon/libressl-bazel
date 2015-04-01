@@ -58,12 +58,12 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/ocsp.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/ocsp.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 /* Utility functions related to sending OCSP responses and extracting
  * relevant information from the request.

@@ -119,12 +119,12 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/buffer.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
 
-#include "libressl/pqueue.h"
+#include "pqueue.h"
 
 #define RSMBLY_BITMASK_SIZE(msg_len) (((msg_len) + 7) / 8)
 

@@ -59,10 +59,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/asn1t.h"
-#include "openssl/dsa.h"
-#include "openssl/err.h"
+#include <openssl/asn1.h>
+#include <openssl/asn1t.h>
+#include <openssl/dsa.h>
+#include <openssl/err.h>
 
 /* Override the default new methods */
 static int

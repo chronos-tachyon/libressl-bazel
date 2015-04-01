@@ -60,7 +60,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/idea.h"
+#include <openssl/idea.h>
 
 unsigned char k[16]={
 	0x00,0x01,0x00,0x02,0x00,0x03,0x00,0x04,

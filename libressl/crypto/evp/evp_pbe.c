@@ -59,12 +59,12 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pkcs12.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pkcs12.h>
+#include <openssl/x509.h>
 
 #include "evp_locl.h"
 

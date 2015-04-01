@@ -3,20 +3,23 @@
 
 cc_library(
     name = "tls",
-    hdrs = ["//libressl:libtls_headers"],
-    srcs = [
-      "tls.c",
-      "tls_client.c",
-      "tls_config.c",
-      "tls_server.c",
-      "tls_util.c",
-      "tls_verify.c",
-      "tls_internal.h",
+    hdrs = ["//libressl/include:libtls"],
+    srcs = glob(["*.c", "*.h"]),
+    copts = [
+      "-Ilibressl/include",
+      "-DLIBRESSL_INTERNAL",
     ],
     deps = [
-      "//libressl:libcrypto",
-      "//libressl:libssl",
+      ":headers",
+      "//libressl/crypto",
+      "//libressl/ssl",
     ],
-    copts = ["-include", "stdint.h"],
-    visibility = ["//libressl:__pkg__"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "headers",
+    hdrs = ["//libressl/include:libtls"],
+    includes = ["libressl/include"],
+    visibility = ["//visibility:public"],
 )

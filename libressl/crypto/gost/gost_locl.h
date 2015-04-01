@@ -52,8 +52,8 @@
 #ifndef HEADER_GOST_LOCL_H
 #define HEADER_GOST_LOCL_H
 
-#include "openssl/ec.h"
-#include "openssl/ecdsa.h"
+#include <openssl/ec.h>
+#include <openssl/ecdsa.h>
 
 /* Internal representation of GOST substitution blocks */
 typedef struct {

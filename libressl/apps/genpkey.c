@@ -61,12 +61,12 @@
 
 #include "apps.h"
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 static int

@@ -112,14 +112,14 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 void

@@ -58,12 +58,12 @@
 
 #include <stdio.h>
 
-#include "openssl/bn.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/bn.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 int
 X509_CRL_print_fp(FILE *fp, X509_CRL *x)

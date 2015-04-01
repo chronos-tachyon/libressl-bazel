@@ -61,13 +61,13 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
+#include <openssl/asn1.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
 
 /* obj_dat.h is generated from objects.h by obj_dat.pl */
 #ifndef OPENSSL_NO_OBJECT

@@ -63,7 +63,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 
 int
 BIO_sock_init(void)

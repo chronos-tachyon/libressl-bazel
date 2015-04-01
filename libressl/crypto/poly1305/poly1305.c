@@ -15,7 +15,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include "openssl/poly1305.h"
+#include <openssl/poly1305.h>
 /* $OpenBSD$ */
 /*
  * Public Domain poly1305 from Andrew Moon

@@ -58,11 +58,11 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/ui.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/ui.h>
 
 #include "ui_locl.h"
 

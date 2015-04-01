@@ -19,7 +19,7 @@ import tempfile
 
 UPSTREAM_URL = 'https://github.com/libressl-portable/openbsd.git'
 
-NEEDED_COMPAT = (
+COMPAT_HEADERS = (
     'libcrypto/crypto/arc4random_freebsd.h',
     'libcrypto/crypto/arc4random_hpux.h',
     'libcrypto/crypto/arc4random_linux.h',
@@ -27,15 +27,10 @@ NEEDED_COMPAT = (
     'libcrypto/crypto/arc4random_osx.h',
     'libcrypto/crypto/arc4random_solaris.h',
     'libcrypto/crypto/arc4random_win.h',
-    'libcrypto/crypto/getentropy_freebsd.c',
-    'libcrypto/crypto/getentropy_hpux.c',
-    'libcrypto/crypto/getentropy_linux.c',
-    'libcrypto/crypto/getentropy_netbsd.c',
-    'libcrypto/crypto/getentropy_osx.c',
-    'libcrypto/crypto/getentropy_solaris.c',
-    'libcrypto/crypto/getentropy_win.c',
-    'libc/crypt/arc4random.c',
     'libc/crypt/chacha_private.h',
+)
+COMPAT_SOURCES = (
+    'libc/crypt/arc4random.c',
     'libc/stdlib/reallocarray.c',
     'libc/stdlib/strtonum.c',
     'libc/string/explicit_bzero.c',
@@ -48,7 +43,7 @@ NEEDED_COMPAT = (
     'libc/string/timingsafe_memcmp.c',
 )
 
-PUBLISHED_CRYPTO = (
+LIBCRYPTO_HEADERS = (
     'GENERATED/obj_mac.h',
     'libcrypto/crypto/arch/amd64/opensslconf.h',
     'libssl/src/crypto/aes/aes.h',
@@ -115,7 +110,7 @@ PUBLISHED_CRYPTO = (
     'libssl/src/crypto/x509/x509_vfy.h',
     'libssl/src/e_os2.h',
 )
-PUBLISHED_SSL = (
+LIBSSL_HEADERS = (
     'libssl/src/ssl/dtls1.h',
     'libssl/src/ssl/srtp.h',
     'libssl/src/ssl/ssl2.h',
@@ -124,12 +119,12 @@ PUBLISHED_SSL = (
     'libssl/src/ssl/ssl.h',
     'libssl/src/ssl/tls1.h',
 )
-PUBLISHED_TLS = (
+LIBTLS_HEADERS = (
     'libssl/src/ssl/pqueue.h',
     'libtls/tls.h',
 )
-PUBLISHED_NOTLS = PUBLISHED_CRYPTO + PUBLISHED_SSL
-PUBLISHED = PUBLISHED_TLS + PUBLISHED_NOTLS
+NOTLS_HEADERS = LIBCRYPTO_HEADERS + LIBSSL_HEADERS
+PUBLISHED = LIBTLS_HEADERS + NOTLS_HEADERS
 
 DISCARD = (
     # Conflicting headers (we only keep arch/amd64)
@@ -557,39 +552,27 @@ def main(argv):
   Pull(args, openbsd_branch)
   Clean(args)
 
-  def HeaderList(container):
-    return sorted(map(os.path.basename, container), key=ByVersion)
+  def Headers(container, subdir=None):
+    if subdir:
+      fn = lambda x: os.path.join(subdir, os.path.basename(x))
+    else:
+      fn = lambda x: os.path.basename(x)
+    return sorted(map(fn, container), key=ByVersion)
 
   subst_vars = {'openbsd_branch': openbsd_branch,
                 'libressl_version': libressl_version}
-  subst_vars['libcrypto_headers'] = HeaderList(PUBLISHED_CRYPTO)
-  subst_vars['libssl_headers'] = HeaderList(PUBLISHED_SSL)
-  subst_vars['libtls_headers'] = HeaderList(PUBLISHED_TLS)
+  subst_vars['libcrypto_headers'] = Headers(LIBCRYPTO_HEADERS, subdir='openssl')
+  subst_vars['libssl_headers'] = Headers(LIBSSL_HEADERS, subdir='openssl')
+  subst_vars['libtls_headers'] = Headers(LIBTLS_HEADERS)
   subst_match = '|'.join(re.escape(x) for x in sorted(subst_vars))
   subst_match = r'\{\{(' + subst_match + r')\}\}'
 
   IsSource = IsPattern(r'\.[chSs]$')
-  published_libressl = '|'.join(re.escape(os.path.basename(x))
-                                for x in sorted(PUBLISHED_TLS))
-  published_openssl = '|'.join(re.escape(os.path.basename(x))
-                               for x in sorted(PUBLISHED_NOTLS))
   standard_transforms = [
     Replace(subst_match, lambda m: repr(subst_vars[m.group(1)])),
     Replace(r'"LibreSSL [^"]*"',
             '"LibreSSL {}"'.format(libressl_version),
             predicate=lambda x: x.endswith('/opensslv.h')),
-    Replace(r'(?m)^(\s*#\s*include\s+)"(' + published_libressl + ')"',
-            r'\1"libressl/\2"',
-            predicate=IsSource),
-    Replace(r'(?m)^(\s*#\s*include\s+)<(' + published_libressl + ')>',
-            r'\1"libressl/\2"',
-            predicate=IsSource),
-    Replace(r'(?m)^(\s*#\s*include\s+)"(' + published_openssl + ')"',
-            r'\1"openssl/\2"',
-            predicate=IsSource),
-    Replace(r'(?m)^(\s*#\s*include\s+)<openssl/(' + published_openssl + ')>',
-            r'\1"openssl/\2"',
-            predicate=IsSource),
     InlineCInclude,
   ]
 
@@ -612,20 +595,25 @@ def main(argv):
   print('Copying headers...')
   openbsd_srclib = openbsd.SubTree('src/lib')
   openbsd_srclib.CopyTo(
-      DST('libressl'),
-      predicate=IsIn(PUBLISHED_TLS),
+      DST('libressl/include'),
+      predicate=IsIn(LIBTLS_HEADERS),
       flatten=True,
       transforms=standard_transforms)
   openbsd_srclib.CopyTo(
-      DST('openssl'),
-      predicate=IsIn(PUBLISHED_NOTLS),
+      DST('libressl/include/openssl'),
+      predicate=IsIn(NOTLS_HEADERS),
+      flatten=True,
+      transforms=standard_transforms)
+  openbsd_srclib.CopyTo(
+      DST('libressl/include'),
+      predicate=IsIn(COMPAT_HEADERS),
       flatten=True,
       transforms=standard_transforms)
 
   print('Copying compatibility sources...')
   openbsd_srclib.CopyTo(
-      DST('libressl/compat'),
-      predicate=And(IsSource, IsIn(NEEDED_COMPAT)),
+      DST('libressl/crypto/compat'),
+      predicate=IsIn(COMPAT_SOURCES),
       flatten=True,
       transforms=standard_transforms)
 
@@ -664,7 +652,7 @@ def main(argv):
         tmp1.name,
         tmp2.name,
       ], cwd=BSD('src/lib/libssl/src/crypto/objects'))
-      Copy(tmp1.name, DST('openssl/obj_mac.h'),
+      Copy(tmp1.name, DST('libressl/include/openssl/obj_mac.h'),
            transforms=standard_transforms)
       Copy(tmp2.name, DST('libressl/crypto/objects/obj_dat.h'),
            transforms=standard_transforms)

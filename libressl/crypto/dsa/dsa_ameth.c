@@ -58,16 +58,16 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1.h"
-#include "openssl/bn.h"
-#include "openssl/dsa.h"
-#include "openssl/err.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/bn.h>
+#include <openssl/dsa.h>
+#include <openssl/err.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_CMS
-#include "openssl/cms.h"
+#include <openssl/cms.h>
 #endif
 
 #include "asn1_locl.h"

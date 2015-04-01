@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1.h"
-#include "openssl/err.h"
+#include <openssl/asn1.h>
+#include <openssl/err.h>
 
 #ifndef NO_ASN1_OLD
 

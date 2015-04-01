@@ -160,23 +160,23 @@
 
 #include <ctype.h>
 
-#include "openssl/opensslconf.h"
-#include "openssl/e_os2.h"
-#include "openssl/bio.h"
-#include "openssl/crypto.h"
-#include "openssl/evp.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
-#include "openssl/ssl.h"
+#include <openssl/opensslconf.h>
+#include <openssl/e_os2.h>
+#include <openssl/bio.h>
+#include <openssl/crypto.h>
+#include <openssl/evp.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
+#include <openssl/ssl.h>
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
-#include "openssl/rand.h"
-#include "openssl/rsa.h"
-#include "openssl/dsa.h"
-#include "openssl/dh.h"
-#include "openssl/bn.h"
+#include <openssl/err.h>
+#include <openssl/rand.h>
+#include <openssl/rsa.h>
+#include <openssl/dsa.h>
+#include <openssl/dh.h>
+#include <openssl/bn.h>
 
 #define TEST_SERVER_CERT "../apps/server.pem"
 #define TEST_CLIENT_CERT "../apps/client.pem"

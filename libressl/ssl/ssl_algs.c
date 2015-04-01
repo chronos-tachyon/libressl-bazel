@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
 
 #include "ssl_locl.h"
 

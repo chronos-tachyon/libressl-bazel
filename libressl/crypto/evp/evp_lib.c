@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
 
 int
 EVP_CIPHER_param_to_asn1(EVP_CIPHER_CTX *c, ASN1_TYPE *type)

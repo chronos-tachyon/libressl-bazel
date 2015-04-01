@@ -109,7 +109,7 @@
 
 #include <stdint.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #if !defined(DATA_ORDER_IS_BIG_ENDIAN) && !defined(DATA_ORDER_IS_LITTLE_ENDIAN)
 #error "DATA_ORDER must be defined!"

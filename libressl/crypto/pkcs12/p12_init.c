@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/pkcs12.h"
+#include <openssl/err.h>
+#include <openssl/pkcs12.h>
 
 /* Initialise a PKCS12 structure to take data */
 

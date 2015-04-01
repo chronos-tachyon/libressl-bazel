@@ -58,9 +58,9 @@
 
 #include <stdio.h>
 
-#include "openssl/bn.h"
-#include "openssl/dh.h"
-#include "openssl/err.h"
+#include <openssl/bn.h>
+#include <openssl/dh.h>
+#include <openssl/err.h>
 
 static int generate_key(DH *dh);
 static int compute_key(unsigned char *key, const BIGNUM *pub_key, DH *dh);

@@ -61,9 +61,9 @@
 
 #include "apps.h"
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
 
 int pkey_main(int, char **);
 

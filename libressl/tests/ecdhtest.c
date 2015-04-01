@@ -71,15 +71,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/crypto.h"
-#include "openssl/bio.h"
-#include "openssl/bn.h"
-#include "openssl/objects.h"
-#include "openssl/sha.h"
-#include "openssl/err.h"
+#include <openssl/crypto.h>
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/objects.h>
+#include <openssl/sha.h>
+#include <openssl/err.h>
 
-#include "openssl/ec.h"
-#include "openssl/ecdh.h"
+#include <openssl/ec.h>
+#include <openssl/ecdh.h>
 
 static const int KDF1_SHA1_len = 20;
 static void *KDF1_SHA1(const void *in, size_t inlen, void *out, size_t *outlen)

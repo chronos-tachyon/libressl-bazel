@@ -3,54 +3,14 @@
 
 cc_library(
     name = "libressl",
-    hdrs = [
-      ":libtls_headers",
-      "//openssl:libcrypto_headers",
-      "//openssl:libssl_headers",
-    ],
+    hdrs = ["//libressl/include"],
+    includes = ["libressl/include"],
     deps = [
-      ":libcrypto",
-      ":libssl",
-      ":libtls",
+      "//libressl/crypto",
+      "//libressl/ssl",
+      "//libressl/tls",
     ],
     visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "headers",
-    hdrs = [
-      ":libtls_headers",
-      "//openssl:libcrypto_headers",
-      "//openssl:libssl_headers",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "libcrypto",
-    hdrs = ["//openssl:libcrypto_headers"],
-    deps = ["//libressl/crypto"],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "libssl",
-    hdrs = ["//openssl:libssl_headers"],
-    deps = ["//libressl/ssl"],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
-    name = "libtls",
-    hdrs = [":libtls_headers"],
-    deps = ["//libressl/tls"],
-    visibility = ["//visibility:public"],
-)
-
-filegroup(
-    name = "libtls_headers",
-    srcs = {{libtls_headers}},
-    visibility = ["//libressl:__subpackages__"],
 )
 
 config_setting(

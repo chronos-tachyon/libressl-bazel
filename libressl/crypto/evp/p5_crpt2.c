@@ -60,14 +60,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #if !defined(OPENSSL_NO_HMAC) && !defined(OPENSSL_NO_SHA)
 
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/hmac.h"
-#include "openssl/x509.h"
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
+#include <openssl/x509.h>
 
 #include "evp_locl.h"
 

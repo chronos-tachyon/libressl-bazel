@@ -59,8 +59,8 @@
 
 #include "apps.h"
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
 
 struct {
 	int base64;

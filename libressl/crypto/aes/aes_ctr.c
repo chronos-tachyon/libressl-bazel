@@ -49,8 +49,8 @@
  *
  */
 
-#include "openssl/aes.h"
-#include "openssl/modes.h"
+#include <openssl/aes.h>
+#include <openssl/modes.h>
 
 void
 AES_ctr128_encrypt(const unsigned char *in, unsigned char *out,

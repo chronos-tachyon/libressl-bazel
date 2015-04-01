@@ -1,6 +1,8 @@
 #!/bin/sh
-set -e
-./arc4randomforktest
-./arc4randomforktest -b
-./arc4randomforktest -p
-./arc4randomforktest -bp
+set -eu
+DIR="${TEST_SRCDIR}/libressl/tests"
+TEST="${DIR}/arc4randomforktest"
+"$TEST"
+"$TEST" -b
+"$TEST" -p
+"$TEST" -bp

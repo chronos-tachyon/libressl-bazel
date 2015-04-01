@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/crypto.h"
-#include "openssl/dso.h"
-#include "openssl/err.h"
+#include <openssl/crypto.h>
+#include <openssl/dso.h>
+#include <openssl/err.h>
 
 static DSO_METHOD *default_DSO_meth = NULL;
 

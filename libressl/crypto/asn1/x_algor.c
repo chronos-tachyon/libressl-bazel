@@ -57,9 +57,9 @@
  */
 
 #include <stddef.h>
-#include "openssl/x509.h"
-#include "openssl/asn1.h"
-#include "openssl/asn1t.h"
+#include <openssl/x509.h>
+#include <openssl/asn1.h>
+#include <openssl/asn1t.h>
 
 static const ASN1_TEMPLATE X509_ALGOR_seq_tt[] = {
 	{

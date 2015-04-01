@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/x509.h"
+#include <openssl/asn1t.h>
+#include <openssl/x509.h>
 
 /* Minor tweak to operation: zero private key data */
 static int

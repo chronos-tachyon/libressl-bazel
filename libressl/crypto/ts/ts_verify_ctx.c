@@ -58,9 +58,9 @@
 
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/objects.h"
-#include "openssl/ts.h"
+#include <openssl/err.h>
+#include <openssl/objects.h>
+#include <openssl/ts.h>
 
 TS_VERIFY_CTX *
 TS_VERIFY_CTX_new(void)

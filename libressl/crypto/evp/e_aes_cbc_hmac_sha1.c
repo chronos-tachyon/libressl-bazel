@@ -51,14 +51,14 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #if !defined(OPENSSL_NO_AES) && !defined(OPENSSL_NO_SHA1)
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/aes.h"
-#include "openssl/sha.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/aes.h>
+#include <openssl/sha.h>
 #include "evp_locl.h"
 
 #ifndef EVP_CIPH_FLAG_AEAD_CIPHER

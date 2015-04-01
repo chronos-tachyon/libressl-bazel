@@ -51,12 +51,12 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_GOST
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/gost.h"
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/gost.h>
 #include "gost_locl.h"
 
 /* Convert little-endian byte array into bignum */

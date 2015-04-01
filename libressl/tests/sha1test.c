@@ -60,8 +60,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "openssl/evp.h"
-#include "openssl/sha.h"
+#include <openssl/evp.h>
+#include <openssl/sha.h>
 
 #undef SHA_0 /* FIPS 180 */
 #define  SHA_1 /* FIPS 180-1 */

@@ -26,9 +26,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "openssl/x509.h"
+#include <openssl/x509.h>
 
-#include "libressl/tls.h"
+#include <tls.h>
 #include "tls_internal.h"
 
 struct tls *

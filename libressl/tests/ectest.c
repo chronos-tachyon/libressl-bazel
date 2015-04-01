@@ -74,15 +74,15 @@
 #include <string.h>
 #include <time.h>
 
-#include "openssl/ec.h"
+#include <openssl/ec.h>
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
-#include "openssl/obj_mac.h"
-#include "openssl/objects.h"
-#include "openssl/bn.h"
-#include "openssl/opensslconf.h"
+#include <openssl/err.h>
+#include <openssl/obj_mac.h>
+#include <openssl/objects.h>
+#include <openssl/bn.h>
+#include <openssl/opensslconf.h>
 
 #define ABORT do { \
 	fflush(stdout); \

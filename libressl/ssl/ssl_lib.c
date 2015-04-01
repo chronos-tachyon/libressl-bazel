@@ -144,15 +144,15 @@
 
 #include "ssl_locl.h"
 
-#include "openssl/bn.h"
-#include "openssl/dh.h"
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
-#include "openssl/ocsp.h"
-#include "openssl/x509v3.h"
+#include <openssl/bn.h>
+#include <openssl/dh.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
+#include <openssl/ocsp.h>
+#include <openssl/x509v3.h>
 
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
 
 const char *SSL_version_str = OPENSSL_VERSION_TEXT;

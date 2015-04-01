@@ -14,7 +14,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include "openssl/ssl.h"
+#include <openssl/ssl.h>
 
 #include <err.h>
 #include <stdio.h>

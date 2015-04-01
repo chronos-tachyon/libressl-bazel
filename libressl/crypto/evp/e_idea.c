@@ -58,13 +58,13 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_IDEA
 
-#include "openssl/evp.h"
-#include "openssl/idea.h"
-#include "openssl/objects.h"
+#include <openssl/evp.h>
+#include <openssl/idea.h>
+#include <openssl/objects.h>
 
 #include "evp_locl.h"
 

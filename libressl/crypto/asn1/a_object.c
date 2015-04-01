@@ -60,11 +60,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/buffer.h"
-#include "openssl/objects.h"
+#include <openssl/asn1.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/buffer.h>
+#include <openssl/objects.h>
 
 int
 i2d_ASN1_OBJECT(ASN1_OBJECT *a, unsigned char **pp)

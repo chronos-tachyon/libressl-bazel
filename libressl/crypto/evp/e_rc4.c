@@ -58,13 +58,13 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_RC4
 
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/rc4.h"
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/rc4.h>
 
 #include "evp_locl.h"
 

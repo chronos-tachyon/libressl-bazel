@@ -23,8 +23,8 @@
 
 #include <netinet/in.h>
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
 
 struct bio_get_host_ip_test {
 	char *input;

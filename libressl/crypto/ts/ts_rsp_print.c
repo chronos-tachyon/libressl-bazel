@@ -58,10 +58,10 @@
 
 #include <stdio.h>
 
-#include "openssl/bn.h"
-#include "openssl/objects.h"
-#include "openssl/ts.h"
-#include "openssl/x509v3.h"
+#include <openssl/bn.h>
+#include <openssl/objects.h>
+#include <openssl/ts.h>
+#include <openssl/x509v3.h>
 
 struct status_map_st {
 	int bit;

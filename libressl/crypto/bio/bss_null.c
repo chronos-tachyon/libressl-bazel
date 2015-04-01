@@ -60,7 +60,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 
 static int null_write(BIO *h, const char *buf, int num);
 static int null_read(BIO *h, char *buf, int size);

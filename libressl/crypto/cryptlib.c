@@ -118,13 +118,13 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/crypto.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/safestack.h"
-#include "openssl/sha.h"
+#include <openssl/crypto.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/safestack.h>
+#include <openssl/sha.h>
 
 DECLARE_STACK_OF(CRYPTO_dynlock)
 

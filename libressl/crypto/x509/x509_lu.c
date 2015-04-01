@@ -58,10 +58,10 @@
 
 #include <stdio.h>
 
-#include "openssl/err.h"
-#include "openssl/lhash.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/err.h>
+#include <openssl/lhash.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 #include "x509_lcl.h"
 
 X509_LOOKUP *

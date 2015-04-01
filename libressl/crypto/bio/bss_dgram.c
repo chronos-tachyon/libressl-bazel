@@ -68,9 +68,9 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 
 #ifndef OPENSSL_NO_DGRAM
 

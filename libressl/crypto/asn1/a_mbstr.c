@@ -60,8 +60,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/err.h"
+#include <openssl/asn1.h>
+#include <openssl/err.h>
 
 #include "asn1_locl.h"
 

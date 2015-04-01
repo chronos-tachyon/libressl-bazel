@@ -65,10 +65,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/objects.h"
-#include "openssl/ocsp.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/objects.h>
+#include <openssl/ocsp.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 
 /* Standard wrapper functions for extensions */
 

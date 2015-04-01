@@ -62,9 +62,9 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "openssl/crypto.h"
-#include "openssl/rand.h"
-#include "openssl/buffer.h"
+#include <openssl/crypto.h>
+#include <openssl/rand.h>
+#include <openssl/buffer.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>

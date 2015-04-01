@@ -59,9 +59,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/asn1.h"
-#include "openssl/crypto.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/crypto.h>
+#include <openssl/x509.h>
 
 #include "asn1_locl.h"
 

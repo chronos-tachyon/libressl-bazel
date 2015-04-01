@@ -50,13 +50,13 @@
  */
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_GOST
 
-#include "openssl/evp.h"
-#include "openssl/gost.h"
-#include "openssl/objects.h"
+#include <openssl/evp.h>
+#include <openssl/gost.h>
+#include <openssl/objects.h>
 
 static int
 gostr341194_init(EVP_MD_CTX *ctx)

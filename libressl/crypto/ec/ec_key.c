@@ -63,10 +63,10 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #include "ec_lcl.h"
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 EC_KEY *
 EC_KEY_new(void)

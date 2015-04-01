@@ -59,10 +59,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/err.h"
-#include "openssl/buffer.h"
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
+#include <openssl/err.h>
+#include <openssl/buffer.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
 
 ASN1_OBJECT *
 OBJ_dup(const ASN1_OBJECT *o)

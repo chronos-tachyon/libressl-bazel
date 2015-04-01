@@ -63,7 +63,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 
 static int sock_write(BIO *h, const char *buf, int num);
 static int sock_read(BIO *h, char *buf, int size);

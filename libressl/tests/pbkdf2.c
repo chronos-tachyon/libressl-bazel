@@ -53,13 +53,13 @@
 #include <string.h>
 #include <errno.h>
 
-#include "openssl/opensslconf.h"
-#include "openssl/evp.h"
+#include <openssl/opensslconf.h>
+#include <openssl/evp.h>
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
-#include "openssl/conf.h"
+#include <openssl/err.h>
+#include <openssl/conf.h>
 
 typedef struct {
 	const char *pass;

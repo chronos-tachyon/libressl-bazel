@@ -55,8 +55,8 @@
 #include <ctype.h>
 #include <stdio.h>
 
-#include "openssl/asn1.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/x509.h>
 
 /* PKCS#7 wrappers round generalised stream and MIME routines */
 

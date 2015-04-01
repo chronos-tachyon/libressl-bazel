@@ -60,17 +60,17 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/bn.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/rsa.h"
-#include "openssl/x509.h"
+#include <openssl/asn1t.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/rsa.h>
+#include <openssl/x509.h>
 
 #ifndef OPENSSL_NO_CMS
-#include "openssl/cms.h"
+#include <openssl/cms.h>
 #endif
 
 #include "evp_locl.h"

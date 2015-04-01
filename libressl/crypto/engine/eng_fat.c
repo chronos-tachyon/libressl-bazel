@@ -60,11 +60,11 @@
 
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/err.h"
+#include <openssl/err.h>
 #include "eng_int.h"
-#include "openssl/conf.h"
+#include <openssl/conf.h>
 
 int
 ENGINE_set_default(ENGINE *e, unsigned int flags)

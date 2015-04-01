@@ -67,8 +67,8 @@
 #include <string.h>
 #include <syslog.h>
 
-#include "openssl/buffer.h"
-#include "openssl/err.h"
+#include <openssl/buffer.h>
+#include <openssl/err.h>
 
 #ifndef NO_SYSLOG
 

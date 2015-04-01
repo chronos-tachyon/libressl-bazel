@@ -73,15 +73,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/crypto.h"
-#include "openssl/bio.h"
-#include "openssl/evp.h"
-#include "openssl/bn.h"
-#include "openssl/ecdsa.h"
+#include <openssl/crypto.h>
+#include <openssl/bio.h>
+#include <openssl/evp.h>
+#include <openssl/bn.h>
+#include <openssl/ecdsa.h>
 #ifndef OPENSSL_NO_ENGINE
-#include "openssl/engine.h"
+#include <openssl/engine.h>
 #endif
-#include "openssl/err.h"
+#include <openssl/err.h>
 
 /* declaration of the test functions */
 int x9_62_test_internal(BIO *out, int nid, const char *r, const char *s);

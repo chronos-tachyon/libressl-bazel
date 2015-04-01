@@ -62,17 +62,17 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1.h"
-#include "openssl/buffer.h"
-#include "openssl/crypto.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/lhash.h"
-#include "openssl/objects.h"
-#include "openssl/x509.h"
-#include "openssl/x509v3.h"
+#include <openssl/asn1.h>
+#include <openssl/buffer.h>
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 #include "x509_lcl.h"
 
 /* CRL score values */

@@ -58,11 +58,11 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/conf.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
+#include <openssl/conf.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
 
 #include "cryptlib.h"
 

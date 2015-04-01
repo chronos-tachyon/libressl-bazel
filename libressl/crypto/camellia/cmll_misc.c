@@ -49,9 +49,9 @@
  *
  */
 
-#include "openssl/opensslv.h"
-#include "openssl/crypto.h"
-#include "openssl/camellia.h"
+#include <openssl/opensslv.h>
+#include <openssl/crypto.h>
+#include <openssl/camellia.h>
 #include "cmll_locl.h"
 
 int

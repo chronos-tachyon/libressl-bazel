@@ -53,8 +53,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/aes.h"
-#include "openssl/modes.h"
+#include <openssl/aes.h>
+#include <openssl/modes.h>
 
 /* XXX - something like this should be in the public headers. */
 struct gcm128_context {

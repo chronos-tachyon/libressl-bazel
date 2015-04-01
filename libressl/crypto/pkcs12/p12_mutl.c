@@ -60,13 +60,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_HMAC
 
-#include "openssl/err.h"
-#include "openssl/hmac.h"
-#include "openssl/pkcs12.h"
+#include <openssl/err.h>
+#include <openssl/hmac.h>
+#include <openssl/pkcs12.h>
 
 /* Generate a MAC */
 int

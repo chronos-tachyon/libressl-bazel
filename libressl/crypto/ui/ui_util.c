@@ -55,7 +55,7 @@
 
 #include <string.h>
 
-#include "openssl/ui_compat.h"
+#include <openssl/ui_compat.h>
 
 #include "ui_locl.h"
 

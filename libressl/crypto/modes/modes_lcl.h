@@ -8,9 +8,9 @@
 
 #include <machine/endian.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/modes.h"
+#include <openssl/modes.h>
 
 #if defined(_LP64)
 typedef long i64;

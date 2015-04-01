@@ -9,8 +9,8 @@
 
 #include <ws2tcpip.h>
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
 
 int
 BIO_sock_init(void)

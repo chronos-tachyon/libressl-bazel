@@ -58,9 +58,9 @@
 
 #include <stdio.h>
 
-#include "openssl/dh.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
+#include <openssl/dh.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
 
 int
 DHparams_print_fp(FILE *fp, const DH *x)

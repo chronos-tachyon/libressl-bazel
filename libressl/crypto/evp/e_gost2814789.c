@@ -50,12 +50,12 @@
  */
 #include <string.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
 #ifndef OPENSSL_NO_GOST
-#include "openssl/evp.h"
-#include "openssl/err.h"
-#include "openssl/gost.h"
+#include <openssl/evp.h>
+#include <openssl/err.h>
+#include <openssl/gost.h>
 #include "evp_locl.h"
 
 typedef struct {

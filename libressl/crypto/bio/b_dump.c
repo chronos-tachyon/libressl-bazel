@@ -63,7 +63,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/bio.h"
+#include <openssl/bio.h>
 
 #define TRUNCATE
 #define DUMP_WIDTH	16

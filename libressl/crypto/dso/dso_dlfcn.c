@@ -59,8 +59,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "openssl/dso.h"
-#include "openssl/err.h"
+#include <openssl/dso.h>
+#include <openssl/err.h>
 
 #ifndef DSO_DLFCN
 DSO_METHOD *

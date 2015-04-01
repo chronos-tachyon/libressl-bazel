@@ -55,7 +55,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "openssl/cmac.h"
+#include <openssl/cmac.h>
 
 struct CMAC_CTX_st {
 	/* Cipher context to use */

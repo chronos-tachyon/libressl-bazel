@@ -58,8 +58,8 @@
 
 #include <stdio.h>
 #include "md5_locl.h"
-#include "openssl/opensslv.h"
-#include "openssl/crypto.h"
+#include <openssl/opensslv.h>
+#include <openssl/crypto.h>
 
 /* Implemented from RFC1321 The MD5 Message-Digest Algorithm
  */

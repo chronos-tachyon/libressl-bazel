@@ -22,13 +22,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "openssl/bio.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
-#include "libressl/tls.h"
+#include <tls.h>
 #include "tls_internal.h"
 
 static struct tls_config *tls_config_default;

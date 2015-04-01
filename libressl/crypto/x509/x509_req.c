@@ -58,17 +58,17 @@
 
 #include <stdio.h>
 
-#include "openssl/opensslconf.h"
+#include <openssl/opensslconf.h>
 
-#include "openssl/asn1.h"
-#include "openssl/asn1t.h"
-#include "openssl/bn.h"
-#include "openssl/buffer.h"
-#include "openssl/err.h"
-#include "openssl/evp.h"
-#include "openssl/objects.h"
-#include "openssl/pem.h"
-#include "openssl/x509.h"
+#include <openssl/asn1.h>
+#include <openssl/asn1t.h>
+#include <openssl/bn.h>
+#include <openssl/buffer.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/objects.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
 
 X509_REQ *
 X509_to_X509_REQ(X509 *x, EVP_PKEY *pkey, const EVP_MD *md)

@@ -64,8 +64,8 @@
 #include <string.h>
 #include <time.h>
 
-#include "openssl/asn1t.h"
-#include "openssl/err.h"
+#include <openssl/asn1t.h>
+#include <openssl/err.h>
 
 #include "o_time.h"
 
