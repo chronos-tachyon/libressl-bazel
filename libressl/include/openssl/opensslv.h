@@ -1,4 +1,4 @@
-/* $OpenBSD: opensslv.h,v 1.27 2014/07/11 21:21:59 beck Exp $ */
+/* $OpenBSD: opensslv.h,v 1.28 2014/10/14 13:12:35 bcook Exp $ */
 #ifndef HEADER_OPENSSLV_H
 #define HEADER_OPENSSLV_H
 

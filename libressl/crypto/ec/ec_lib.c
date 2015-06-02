@@ -1,4 +1,4 @@
-/* $OpenBSD: ec_lib.c,v 1.15 2014/07/12 16:03:37 miod Exp $ */
+/* $OpenBSD: ec_lib.c,v 1.17 2015/04/29 00:11:12 doug Exp $ */
 /*
  * Originally written by Bodo Moeller for the OpenSSL project.
  */
@@ -216,8 +216,7 @@ EC_GROUP_copy(EC_GROUP * dest, const EC_GROUP * src)
 		dest->seed = malloc(src->seed_len);
 		if (dest->seed == NULL)
 			return 0;
-		if (!memcpy(dest->seed, src->seed, src->seed_len))
-			return 0;
+		memcpy(dest->seed, src->seed, src->seed_len);
 		dest->seed_len = src->seed_len;
 	} else {
 		free(dest->seed);
@@ -531,12 +530,8 @@ EC_GROUP_cmp(const EC_GROUP * a, const EC_GROUP * b, BN_CTX * ctx)
 		if (!EC_GROUP_get_order(a, a1, ctx) ||
 		    !EC_GROUP_get_order(b, b1, ctx) ||
 		    !EC_GROUP_get_cofactor(a, a2, ctx) ||
-		    !EC_GROUP_get_cofactor(b, b2, ctx)) {
-			BN_CTX_end(ctx);
-			if (ctx_new)
-				BN_CTX_free(ctx);
-			return -1;
-		}
+		    !EC_GROUP_get_cofactor(b, b2, ctx))
+			goto err;
 		if (BN_cmp(a1, b1) || BN_cmp(a2, b2))
 			r = 1;
 	}

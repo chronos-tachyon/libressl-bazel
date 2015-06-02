@@ -1,4 +1,4 @@
-/* $OpenBSD: errstr.c,v 1.19 2014/07/14 00:35:10 deraadt Exp $ */
+/* $OpenBSD: errstr.c,v 1.2 2015/04/13 15:02:23 jsing Exp $ */
 /* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
  * All rights reserved.
  *
@@ -56,6 +56,7 @@
  * [including the GNU Public Licence.]
  */
 
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -67,41 +68,75 @@
 #include <openssl/lhash.h>
 #include <openssl/ssl.h>
 
+struct {
+	int stats;
+} errstr_config;
+
+struct option errstr_options[] = {
+	{
+		.name = "stats",
+		.desc = "Print debugging statistics for the hash table",
+		.type = OPTION_FLAG,
+		.opt.flag = &errstr_config.stats,
+	},
+	{ NULL },
+};
+
+static void
+errstr_usage()
+{
+	fprintf(stderr, "usage: errstr [-stats] errno ...\n");
+	options_usage(errstr_options);
+}
+
 int errstr_main(int, char **);
 
 int
 errstr_main(int argc, char **argv)
 {
-	int i, ret = 0;
+	unsigned long ulval;
+	char *ularg, *ep;
+	int argsused, i;
 	char buf[256];
-	unsigned long l;
+	int ret = 0;
 
-	if ((argc > 1) && (strcmp(argv[1], "-stats") == 0)) {
-		BIO *out = NULL;
+	memset(&errstr_config, 0, sizeof(errstr_config));
 
-		out = BIO_new(BIO_s_file());
-		if ((out != NULL) && BIO_set_fp(out, stdout, BIO_NOCLOSE)) {
-			lh_ERR_STRING_DATA_node_stats_bio(
-			    ERR_get_string_table(), out);
-			lh_ERR_STRING_DATA_stats_bio(ERR_get_string_table(),
-			    out);
-			lh_ERR_STRING_DATA_node_usage_stats_bio(
-			    ERR_get_string_table(), out);
-		}
-		if (out != NULL)
-			BIO_free_all(out);
-		argc--;
-		argv++;
+	if (options_parse(argc, argv, errstr_options, NULL, &argsused) != 0) {
+		errstr_usage();
+		return (1);
 	}
-	for (i = 1; i < argc; i++) {
-		if (sscanf(argv[i], "%lx", &l)) {
-			ERR_error_string_n(l, buf, sizeof buf);
-			printf("%s\n", buf);
-		} else {
-			printf("%s: bad error code\n", argv[i]);
-			printf("usage: errstr [-stats] <errno> ...\n");
-			ret++;
+
+	if (errstr_config.stats) {
+		BIO *out;
+
+		if ((out = BIO_new_fp(stdout, BIO_NOCLOSE)) == NULL) {
+			fprintf(stderr, "Out of memory");
+			return (1);
 		}
+
+		lh_ERR_STRING_DATA_node_stats_bio(ERR_get_string_table(), out);
+		lh_ERR_STRING_DATA_stats_bio(ERR_get_string_table(), out);
+		lh_ERR_STRING_DATA_node_usage_stats_bio(
+			    ERR_get_string_table(), out);
+
+		BIO_free_all(out);
+	}
+
+	for (i = argsused; i < argc; i++) {
+		errno = 0;
+		ularg = argv[i];
+		ulval = strtoul(ularg, &ep, 16);
+		if (strchr(ularg, '-') != NULL ||
+		    (ularg[0] == '\0' || *ep != '\0') ||
+		    (errno == ERANGE && ulval == ULONG_MAX)) {
+			printf("%s: bad error code\n", ularg);
+			ret++;
+			continue;
+		}
+
+		ERR_error_string_n(ulval, buf, sizeof(buf));
+		printf("%s\n", buf);
 	}
 
 	return (ret);

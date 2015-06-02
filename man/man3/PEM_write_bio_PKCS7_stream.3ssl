@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "PEM_write_bio_PKCS7_stream 3ssl"
-.TH PEM_write_bio_PKCS7_stream 3ssl "2015-03-31" "LibreSSL 2.2.0" "LibreSSL"
+.TH PEM_write_bio_PKCS7_stream 3ssl "2015-05-26" "LibreSSL 2.2.0" "LibreSSL"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
